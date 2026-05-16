@@ -1,0 +1,48 @@
+{
+  "enableAllProjectMcpServers": true,
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(dotnet *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(expo *)",
+      "Bash(psql *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(DROP *)",
+      "Bash(dotnet ef database drop*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const c=process.env.CLAUDE_TOOL_INPUT||''; if(c.includes('git commit')) { console.log('\\n✅ Commit xong! Nhớ cập nhật [x] trong .claude/MEMORY.md và ghi hash vào bảng Log.'); }\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '\\n📋 Phiên kết thúc. Kiểm tra .claude/MEMORY.md còn bước nào [~] chưa đánh dấu [x] không.'"
+          }
+        ]
+      }
+    ]
+  }
+}
