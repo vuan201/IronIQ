@@ -41,16 +41,16 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `chore(setup): scaffold dotnet solution with 4 layer architecture`
 
 ### 0.3 Backend — Skeleton Infrastructure
-- [~] Tạo `Result<T>` model (`Application/Common/Models/Result.cs`)
-- [ ] Tạo 3 MediatR Behaviors: `LoggingBehavior`, `ValidationBehavior`, `TransactionBehavior`
-- [ ] Tạo `ICurrentUserService` interface + `CurrentUserService` implementation
-- [ ] Tạo `AppDbContext` rỗng
-- [ ] Tạo `DependencyInjection.cs` trong Infrastructure và Application
-- [ ] Wiring trong `Program.cs`
-- [ ] commit: `chore(infra): add mediatr pipeline behaviors and base infrastructure`
+- [x] Tạo `Result<T>` model (`Application/Common/Models/Result.cs`)
+- [x] Tạo 3 MediatR Behaviors: `LoggingBehavior`, `ValidationBehavior`, `TransactionBehavior`
+- [x] Tạo `ICurrentUserService` interface + `CurrentUserService` implementation
+- [x] Tạo `AppDbContext` rỗng
+- [x] Tạo `DependencyInjection.cs` trong Infrastructure và Application
+- [x] Wiring trong `Program.cs`
+- [x] commit: `chore(infra): add mediatr pipeline behaviors and base infrastructure`
 
 ### 0.4 Frontend — Expo Project
-- [ ] Khởi tạo project:
+- [~] Khởi tạo project:
   ```
   npx create-expo-app apps/mobile --template expo-template-blank-typescript
   ```
@@ -279,3 +279,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 |---|---|---|
 | 2026-05-17 | 0.1 Git & Monorepo | d031097 |
 | 2026-05-17 | 0.2 Backend .NET Solution | 26f8c89 |
+| 2026-05-17 | 0.3 Backend Skeleton Infrastructure | 67dbdd6 |
