@@ -19,7 +19,7 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] `git add .gitignore .claudeignore .claude/` → commit `chore(setup): init repo with ignore files and project docs`
 
 ### 0.2 Backend — .NET Solution
-- [~] Tạo solution và 4 project:
+- [x] Tạo solution và 4 project:
   ```
   dotnet new sln -n IronIQ -o apps/backend
   dotnet new classlib -n IronIQ.Domain -o apps/backend/src/IronIQ.Domain
@@ -28,8 +28,8 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
   dotnet new webapi -n IronIQ.API -o apps/backend/src/IronIQ.API
   dotnet sln add **/*.csproj
   ```
-- [ ] Thêm project references (Domain ← Application ← Infrastructure ← API)
-- [ ] Cài NuGet packages:
+- [x] Thêm project references (Domain ← Application ← Infrastructure ← API)
+- [x] Cài NuGet packages:
   - `MediatR` + `MediatR.Extensions.Microsoft.DependencyInjection`
   - `FluentValidation.AspNetCore`
   - `AutoMapper.Extensions.Microsoft.DependencyInjection`
@@ -37,11 +37,11 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
   - `Npgsql.EntityFrameworkCore.PostgreSQL`
   - `Microsoft.AspNetCore.Authentication.JwtBearer`
   - `BCrypt.Net-Next`
-- [ ] Tạo `appsettings.json` skeleton (ConnectionStrings, JWT, Claude, RevenueCat)
-- [ ] commit: `chore(setup): scaffold dotnet solution with 4 layer architecture`
+- [x] Tạo `appsettings.json` skeleton (ConnectionStrings, JWT, Claude, RevenueCat)
+- [x] commit: `chore(setup): scaffold dotnet solution with 4 layer architecture`
 
 ### 0.3 Backend — Skeleton Infrastructure
-- [ ] Tạo `Result<T>` model (`Application/Common/Models/Result.cs`)
+- [~] Tạo `Result<T>` model (`Application/Common/Models/Result.cs`)
 - [ ] Tạo 3 MediatR Behaviors: `LoggingBehavior`, `ValidationBehavior`, `TransactionBehavior`
 - [ ] Tạo `ICurrentUserService` interface + `CurrentUserService` implementation
 - [ ] Tạo `AppDbContext` rỗng
@@ -278,3 +278,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | Ngày | Bước | Commit Hash |
 |---|---|---|
 | 2026-05-17 | 0.1 Git & Monorepo | d031097 |
+| 2026-05-17 | 0.2 Backend .NET Solution | 26f8c89 |
