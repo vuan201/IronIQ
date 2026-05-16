@@ -1,0 +1,60 @@
+# ─── Dependencies ─────────────────────────────────────────────────────────────
+node_modules/
+packages/
+.nuget/
+
+# ─── Build Outputs ────────────────────────────────────────────────────────────
+bin/
+obj/
+out/
+dist/
+web-build/
+publish/
+artifacts/
+
+# ─── Generated / Auto-created ─────────────────────────────────────────────────
+# EF Core migrations (schema quá dài, không cần đọc)
+**/Migrations/
+
+# Expo cache
+.expo/
+expo-env.d.ts
+
+# Lock files (quá dài, không thêm context)
+package-lock.json
+yarn.lock
+*.lock
+
+# ─── Assets lớn ───────────────────────────────────────────────────────────────
+assets/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ttf
+*.otf
+*.woff
+*.woff2
+*.mp4
+*.mp3
+
+# ─── Test Results & Coverage ──────────────────────────────────────────────────
+TestResults/
+coverage/
+*.trx
+*.coveragexml
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Native Build Artifacts ───────────────────────────────────────────────────
+android/
+ios/
+*.jks
+*.keystore
+*.ipa
+*.apk
+*.aab

@@ -1,0 +1,92 @@
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Editor / IDE ─────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ─── Environment & Secrets ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.local
+*.local.*
+appsettings.Development.json
+secrets.json
+
+# ─── FRONTEND — React Native / Expo ───────────────────────────────────────────
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Expo native builds
+android/
+ios/
+*.jks
+*.keystore
+*.p12
+*.mobileprovision
+*.ipa
+*.apk
+*.aab
+google-services.json
+GoogleService-Info.plist
+
+# Metro bundler cache
+.metro-health-check*
+
+# Yarn / npm
+yarn-error.log
+npm-debug.log*
+package-lock.json
+
+# ─── BACKEND — .NET ───────────────────────────────────────────────────────────
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+# .NET user files
+*.user
+*.userosscache
+*.dbmdl
+*.dbproj.schemaview
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test results
+TestResults/
+coverage/
+*.trx
+*.coveragexml
+
+# Publish output
+publish/
+PublishProfiles/
+
+# ─── DATABASE ─────────────────────────────────────────────────────────────────
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+
+# ─── LOGS ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
