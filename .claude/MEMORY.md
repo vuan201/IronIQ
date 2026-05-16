@@ -7,8 +7,8 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 ## GIAI ĐOẠN 0 — Setup Dự án
 
 ### 0.1 Git & Monorepo
-- [~] `git init` tại `Gym-Room/`
-- [~] Tạo cấu trúc thư mục gốc:
+- [x] `git init` tại `Gym-Room/`
+- [x] Tạo cấu trúc thư mục gốc:
   ```
   Gym-Room/
   ├── apps/
@@ -16,10 +16,10 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
   │   └── backend/    ← .NET solution
   └── .claude/
   ```
-- [~] `git add .gitignore .claudeignore .claude/` → commit `chore(setup): init repo with ignore files and project docs`
+- [x] `git add .gitignore .claudeignore .claude/` → commit `chore(setup): init repo with ignore files and project docs`
 
 ### 0.2 Backend — .NET Solution
-- [ ] Tạo solution và 4 project:
+- [~] Tạo solution và 4 project:
   ```
   dotnet new sln -n IronIQ -o apps/backend
   dotnet new classlib -n IronIQ.Domain -o apps/backend/src/IronIQ.Domain
@@ -277,4 +277,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 
 | Ngày | Bước | Commit Hash |
 |---|---|---|
-| | | |
+| 2026-05-17 | 0.1 Git & Monorepo | d031097 |

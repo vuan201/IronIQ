@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/IronIQ.API/IronIQ.API.csproj" />
+    <Project Path="src/IronIQ.Application/IronIQ.Application.csproj" />
+    <Project Path="src/IronIQ.Domain/IronIQ.Domain.csproj" />
+    <Project Path="src/IronIQ.Infrastructure/IronIQ.Infrastructure.csproj" />
+  </Folder>
+</Solution>
