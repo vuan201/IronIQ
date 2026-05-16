@@ -1,0 +1,36 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Enter password",
+      "submitButton": "Login",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Register now"
+    },
+    "register": {
+      "title": "Create account",
+      "submitButton": "Register",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Login"
+    }
+  },
+  "exercises": {
+    "card": {
+      "difficulty": "Difficulty",
+      "muscleGroup": "Muscle group",
+      "equipment": "Equipment"
+    }
+  }
+}

@@ -50,11 +50,11 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `chore(infra): add mediatr pipeline behaviors and base infrastructure`
 
 ### 0.4 Frontend — Expo Project
-- [~] Khởi tạo project:
+- [x] Khởi tạo project:
   ```
   npx create-expo-app apps/mobile --template expo-template-blank-typescript
   ```
-- [ ] Cài packages:
+- [x] Cài packages:
   ```
   npx expo install expo-router react-native-safe-area-context react-native-screens
   npx expo install expo-sqlite expo-secure-store
@@ -64,9 +64,9 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
   npm install react-native-mmkv
   npm install @expo/vector-icons
   ```
-- [ ] Setup `tailwind.config.js` + `babel.config.js` cho NativeWind
-- [ ] Setup Expo Router: cấu hình `app.json` scheme + entry point
-- [ ] commit: `chore(setup): init expo project with core dependencies`
+- [x] Setup `tailwind.config.js` + `babel.config.js` cho NativeWind
+- [x] Setup Expo Router: cấu hình `app.json` scheme + entry point
+- [x] commit: `chore(setup): init expo project with core dependencies`
 
 ### 0.5 Frontend — Foundation Layer
 - [ ] Tạo `constants/colors.ts` — Light/Dark palette đầy đủ từ DESIGN.md
@@ -280,3 +280,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-17 | 0.1 Git & Monorepo | d031097 |
 | 2026-05-17 | 0.2 Backend .NET Solution | 26f8c89 |
 | 2026-05-17 | 0.3 Backend Skeleton Infrastructure | 67dbdd6 |
+| 2026-05-17 | 0.4 Frontend Expo Project | 2a78e6f |

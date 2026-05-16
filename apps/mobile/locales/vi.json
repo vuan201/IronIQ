@@ -1,0 +1,36 @@
+{
+  "common": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "loading": "Đang tải...",
+    "error": "Đã có lỗi xảy ra",
+    "retry": "Thử lại"
+  },
+  "auth": {
+    "login": {
+      "title": "Đăng nhập",
+      "emailLabel": "Email",
+      "emailPlaceholder": "email@example.com",
+      "passwordLabel": "Mật khẩu",
+      "passwordPlaceholder": "Nhập mật khẩu",
+      "submitButton": "Đăng nhập",
+      "noAccount": "Chưa có tài khoản?",
+      "registerLink": "Đăng ký ngay"
+    },
+    "register": {
+      "title": "Tạo tài khoản",
+      "submitButton": "Đăng ký",
+      "hasAccount": "Đã có tài khoản?",
+      "loginLink": "Đăng nhập"
+    }
+  },
+  "exercises": {
+    "card": {
+      "difficulty": "Độ khó",
+      "muscleGroup": "Nhóm cơ",
+      "equipment": "Dụng cụ"
+    }
+  }
+}
