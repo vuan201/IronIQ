@@ -69,16 +69,16 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `chore(setup): init expo project with core dependencies`
 
 ### 0.5 Frontend — Foundation Layer
-- [ ] Tạo `constants/colors.ts` — Light/Dark palette đầy đủ từ DESIGN.md
-- [ ] Tạo `constants/typography.ts` — font scale
-- [ ] Tạo `constants/spacing.ts` — spacing scale 4px
-- [ ] Tạo `lib/storage.ts` — MMKV wrapper với typed keys
-- [ ] Tạo `lib/i18n.ts` + `locales/vi.json` + `locales/en.json` skeleton
-- [ ] Tạo `lib/query-client.ts` — TanStack Query config
-- [ ] Tạo `lib/api.ts` — Axios instance (baseURL từ env, JWT interceptor placeholder)
-- [ ] Tạo `hooks/useTheme.ts` — đọc MMKV preference → colorScheme
-- [ ] Tạo `app/_layout.tsx` — root layout: ThemeProvider + QueryClientProvider + i18next
-- [ ] commit: `chore(setup): add foundation layer (theme, i18n, api client, storage)`
+- [x] Tạo `constants/colors.ts` — Light/Dark palette đầy đủ từ DESIGN.md
+- [x] Tạo `constants/typography.ts` — font scale
+- [x] Tạo `constants/spacing.ts` — spacing scale 4px
+- [x] Tạo `lib/storage.ts` — MMKV wrapper với typed keys
+- [x] Tạo `lib/i18n.ts` + `locales/vi.json` + `locales/en.json` skeleton
+- [x] Tạo `lib/query-client.ts` — TanStack Query config
+- [x] Tạo `lib/api.ts` — Axios instance (baseURL từ env, JWT interceptor placeholder)
+- [x] Tạo `hooks/useTheme.ts` — đọc MMKV preference → colorScheme
+- [x] Tạo `app/_layout.tsx` — root layout: ThemeProvider + QueryClientProvider + i18next
+- [x] commit: `chore(setup): add foundation layer (theme, i18n, api client, storage)`
 
 ---
 
@@ -281,3 +281,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-17 | 0.2 Backend .NET Solution | 26f8c89 |
 | 2026-05-17 | 0.3 Backend Skeleton Infrastructure | 67dbdd6 |
 | 2026-05-17 | 0.4 Frontend Expo Project | 2a78e6f |
+| 2026-05-17 | 0.5 Frontend Foundation Layer | a493371 |
