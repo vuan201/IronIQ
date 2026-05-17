@@ -17,13 +17,16 @@
       "passwordPlaceholder": "Enter password",
       "submitButton": "Login",
       "noAccount": "Don't have an account?",
-      "registerLink": "Register now"
+      "registerLink": "Register now",
+      "invalidCredentials": "Invalid email or password"
     },
     "register": {
       "title": "Create account",
       "submitButton": "Register",
       "hasAccount": "Already have an account?",
-      "loginLink": "Login"
+      "loginLink": "Login",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "emailTaken": "This email is already registered"
     }
   },
   "exercises": {
