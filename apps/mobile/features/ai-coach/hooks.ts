@@ -25,3 +25,11 @@ export function useProgressionSuggestions(sessionId: string | undefined) {
     enabled: !!sessionId,
   });
 }
+
+export function useSessionReview(sessionId: string | undefined) {
+  return useQuery({
+    queryKey: aiCoachKeys.sessionReview(sessionId ?? ''),
+    queryFn: () => aiCoachApi.getSessionReview(sessionId!).then((r) => r.data),
+    enabled: !!sessionId,
+  });
+}

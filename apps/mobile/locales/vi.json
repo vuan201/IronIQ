@@ -158,6 +158,10 @@
       "exercises": "Bài tập",
       "sets": "Set",
       "done": "Về trang chủ"
+    },
+    "review": {
+      "title": "Nhận xét từ AI Coach",
+      "loading": "Đang phân tích buổi tập..."
     }
   },
   "coins": {

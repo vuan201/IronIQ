@@ -158,6 +158,10 @@
       "exercises": "Exercises",
       "sets": "Sets",
       "done": "Back to Home"
+    },
+    "review": {
+      "title": "AI Coach Review",
+      "loading": "Analyzing your workout..."
     }
   },
   "coins": {

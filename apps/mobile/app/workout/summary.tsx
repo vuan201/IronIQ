@@ -4,7 +4,8 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/colors';
 import { ProgressionSuggestionCard } from '@/components/workout/ProgressionSuggestionCard';
-import { useProgressionSuggestions } from '@/features/ai-coach/hooks';
+import { SessionReviewCard } from '@/components/workout/SessionReviewCard';
+import { useProgressionSuggestions, useSessionReview } from '@/features/ai-coach/hooks';
 import { useSessionHistory } from '@/features/workout-sessions/hooks';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -23,6 +24,7 @@ export default function SummaryScreen() {
   const { sessionId } = useLocalSearchParams<{ sessionId?: string }>();
   const { data: history } = useSessionHistory(1);
   const { data: suggestions } = useProgressionSuggestions(sessionId);
+  const { data: reviewData, isLoading: isReviewLoading } = useSessionReview(sessionId);
 
   const latest = history?.items[0];
 
@@ -81,6 +83,8 @@ export default function SummaryScreen() {
             </View>
           </View>
         )}
+
+        <SessionReviewCard review={reviewData?.review} isLoading={isReviewLoading && !!sessionId} />
 
         <ProgressionSuggestionCard suggestions={suggestions ?? []} />
 

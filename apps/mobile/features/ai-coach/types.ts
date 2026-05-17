@@ -26,3 +26,7 @@ export interface ProgressionSuggestion {
   currentWeightKg: number;
   suggestedWeightKg: number;
 }
+
+export interface SessionReview {
+  review: string;
+}

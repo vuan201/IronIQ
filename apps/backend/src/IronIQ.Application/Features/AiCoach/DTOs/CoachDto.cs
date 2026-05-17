@@ -9,3 +9,5 @@ public record ProgressionSuggestionDto(
     string ExerciseName,
     float CurrentWeightKg,
     float SuggestedWeightKg);
+
+public record SessionReviewDto(string Review);
