@@ -235,10 +235,10 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `feat(ai-coach): add AI coach chat with workout context`
 
 ### 3.2 Auto-Progression
-- [ ] Backend: `AutoProgressionHandler` — lắng nghe `WorkoutSessionCompletedEvent`
+- [x] Backend: `AutoProgressionHandler` — lắng nghe `WorkoutSessionCompletedEvent`
   - Detect: 100% sets hoàn thành trong 2 buổi liên tiếp → suggest tăng tạ 2.5kg
-- [ ] Frontend: Hiển thị suggestion card sau session summary
-- [ ] commit: `feat(ai-coach): add auto-progression suggestions based on session history`
+- [x] Frontend: Hiển thị suggestion card sau session summary
+- [x] commit: `feat(ai-coach): add auto-progression suggestions based on session history`
 
 ### 3.3 Session Review
 - [ ] Backend: `GetSessionReviewQuery` — AI tóm tắt buổi tập, so với lần trước
@@ -297,3 +297,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-18 | 2.2 AdMob Integration | bf1eb55 |
 | 2026-05-18 | 2.3 RevenueCat — Premium Subscription | dbef8d5 |
 | 2026-05-18 | 3.1 AI Chat | 9b0e752 |
+| 2026-05-18 | 3.2 Auto-Progression | 2e5ef82 |
