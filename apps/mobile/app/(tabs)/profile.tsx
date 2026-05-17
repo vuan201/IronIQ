@@ -10,17 +10,21 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
+import { useRouter } from 'expo-router';
 import { useMyProfile, useUpdateProfile } from '@/features/users/hooks';
 import { useAuthStore } from '@/features/auth/store';
 import { useTheme } from '@/hooks/useTheme';
 import { FITNESS_GOALS, FITNESS_LEVELS } from '@/features/users/types';
+import { useCoinBalance } from '@/features/coins/hooks';
 
 export default function ProfileScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const router = useRouter();
   const clearAuth = useAuthStore((s) => s.clearAuth);
   const { data: profile, isLoading } = useMyProfile();
   const updateProfile = useUpdateProfile();
+  const { data: coinData } = useCoinBalance();
 
   const [name, setName] = useState('');
   const [editing, setEditing] = useState(false);
@@ -140,6 +144,31 @@ export default function ProfileScreen() {
           </Text>
           <Text style={{ fontSize: 15, color: colors.text }}>{profile?.subscriptionTier}</Text>
         </View>
+
+        <TouchableOpacity
+          onPress={() => router.push('/coins')}
+          style={{
+            backgroundColor: colors.surface,
+            borderRadius: 16,
+            padding: 16,
+            marginBottom: 16,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <View>
+            <Text style={{ fontSize: 13, color: colors.textSecondary, marginBottom: 2 }}>
+              {t('coins.title')}
+            </Text>
+            <Text style={{ fontSize: 22, fontWeight: '700', color: colors.primary }}>
+              🪙 {coinData?.balance ?? 0}
+            </Text>
+          </View>
+          <Text style={{ fontSize: 14, color: colors.primary, fontWeight: '600' }}>
+            {t('coins.watchAd')} →
+          </Text>
+        </TouchableOpacity>
 
         <TouchableOpacity
           onPress={clearAuth}

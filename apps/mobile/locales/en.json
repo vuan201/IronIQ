@@ -153,6 +153,17 @@
       "done": "Back to Home"
     }
   },
+  "coins": {
+    "title": "Coins",
+    "balance": "Your Balance",
+    "watchAd": "Watch ad → +10 coins",
+    "adLoading": "Loading ad...",
+    "adNotReady": "Ad not ready yet",
+    "earnInfo": "Watch a short rewarded ad to earn 10 coins.",
+    "earnSuccess": "+10 coins earned!",
+    "earnError": "Failed to claim reward. Please try again.",
+    "alreadyClaimed": "This reward has already been claimed."
+  },
   "exercises": {
     "title": "Exercise library",
     "search": "Search exercises...",

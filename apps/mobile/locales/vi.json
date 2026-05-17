@@ -153,6 +153,17 @@
       "done": "Về trang chủ"
     }
   },
+  "coins": {
+    "title": "Xu",
+    "balance": "Số dư của bạn",
+    "watchAd": "Xem quảng cáo → +10 xu",
+    "adLoading": "Đang tải quảng cáo...",
+    "adNotReady": "Quảng cáo chưa sẵn sàng",
+    "earnInfo": "Xem một quảng cáo ngắn để nhận 10 xu.",
+    "earnSuccess": "+10 xu đã được cộng!",
+    "earnError": "Không thể nhận thưởng. Vui lòng thử lại.",
+    "alreadyClaimed": "Phần thưởng này đã được nhận rồi."
+  },
   "exercises": {
     "title": "Thư viện bài tập",
     "search": "Tìm kiếm bài tập...",
