@@ -29,6 +29,22 @@
       "emailTaken": "Email này đã được đăng ký"
     }
   },
+  "tabs": {
+    "home": "Trang chủ",
+    "explore": "Khám phá",
+    "progress": "Tiến độ",
+    "profile": "Hồ sơ"
+  },
+  "profile": {
+    "title": "Hồ sơ",
+    "personalInfo": "Thông tin cá nhân",
+    "name": "Tên",
+    "namePlaceholder": "Nhập tên của bạn",
+    "goal": "Mục tiêu",
+    "level": "Cấp độ",
+    "subscription": "Gói đăng ký",
+    "logout": "Đăng xuất"
+  },
   "onboarding": {
     "subtitle": "Trợ lý tập gym thông minh của bạn",
     "loginButton": "Đăng nhập / Đăng ký",

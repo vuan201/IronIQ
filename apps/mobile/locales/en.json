@@ -29,6 +29,22 @@
       "emailTaken": "This email is already registered"
     }
   },
+  "tabs": {
+    "home": "Home",
+    "explore": "Explore",
+    "progress": "Progress",
+    "profile": "Profile"
+  },
+  "profile": {
+    "title": "Profile",
+    "personalInfo": "Personal info",
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "goal": "Goal",
+    "level": "Level",
+    "subscription": "Subscription",
+    "logout": "Log out"
+  },
   "onboarding": {
     "subtitle": "Your smart gym training assistant",
     "loginButton": "Login / Register",

@@ -6,6 +6,7 @@ using IronIQ.Application.Common.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
+
 namespace IronIQ.Infrastructure.Services;
 
 public class JwtService(IConfiguration configuration) : IJwtService
@@ -19,7 +20,7 @@ public class JwtService(IConfiguration configuration) : IJwtService
 
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
+            new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
             new Claim(JwtRegisteredClaimNames.Email, email),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
