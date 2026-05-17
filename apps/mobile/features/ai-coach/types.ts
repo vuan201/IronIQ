@@ -19,3 +19,10 @@ export interface AskCoachDto {
 export interface CoachResponseDto {
   reply: string;
 }
+
+export interface ProgressionSuggestion {
+  exerciseId: string;
+  exerciseName: string;
+  currentWeightKg: number;
+  suggestedWeightKg: number;
+}

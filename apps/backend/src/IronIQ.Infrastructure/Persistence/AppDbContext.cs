@@ -16,6 +16,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<ExerciseLog> ExerciseLogs => Set<ExerciseLog>();
     public DbSet<SetLog> SetLogs => Set<SetLog>();
     public DbSet<CoinTransaction> CoinTransactions => Set<CoinTransaction>();
+    public DbSet<ProgressionSuggestion> ProgressionSuggestions => Set<ProgressionSuggestion>();
 
     private IDbContextTransaction? _currentTransaction;
 

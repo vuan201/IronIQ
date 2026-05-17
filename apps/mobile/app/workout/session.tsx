@@ -63,9 +63,10 @@ export default function SessionScreen() {
   const handleFinish = async () => {
     if (!session) return;
     try {
-      await completeSession({ sessionId: session.id });
+      const currentSessionId = session.id;
+      await completeSession({ sessionId: currentSessionId });
       clearSession();
-      router.replace('/workout/summary');
+      router.replace(`/workout/summary?sessionId=${currentSessionId}`);
     } catch {
       Alert.alert(t('common.error'));
     }

@@ -1,8 +1,10 @@
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/colors';
+import { ProgressionSuggestionCard } from '@/components/workout/ProgressionSuggestionCard';
+import { useProgressionSuggestions } from '@/features/ai-coach/hooks';
 import { useSessionHistory } from '@/features/workout-sessions/hooks';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -18,7 +20,9 @@ export default function SummaryScreen() {
   const { t } = useTranslation();
   const router = useRouter();
   const { colors } = useTheme();
+  const { sessionId } = useLocalSearchParams<{ sessionId?: string }>();
   const { data: history } = useSessionHistory(1);
+  const { data: suggestions } = useProgressionSuggestions(sessionId);
 
   const latest = history?.items[0];
 
@@ -77,6 +81,8 @@ export default function SummaryScreen() {
             </View>
           </View>
         )}
+
+        <ProgressionSuggestionCard suggestions={suggestions ?? []} />
 
         <Pressable
           onPress={() => router.replace('/(tabs)')}

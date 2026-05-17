@@ -185,6 +185,10 @@
     "restoreSuccess": "Purchases restored successfully.",
     "restoreNotFound": "No previous purchases found."
   },
+  "progression": {
+    "title": "Ready to Progress!",
+    "subtitle": "You've been consistent. Try increasing the weight next session."
+  },
   "exercises": {
     "title": "Exercise library",
     "search": "Search exercises...",

@@ -185,6 +185,10 @@
     "restoreSuccess": "Đã khôi phục mua hàng thành công.",
     "restoreNotFound": "Không tìm thấy lịch sử mua hàng."
   },
+  "progression": {
+    "title": "Sẵn sàng tăng tạ!",
+    "subtitle": "Bạn đã tập đều đặn. Hãy thử tăng tạ ở buổi tập tiếp theo."
+  },
   "exercises": {
     "title": "Thư viện bài tập",
     "search": "Tìm kiếm bài tập...",
