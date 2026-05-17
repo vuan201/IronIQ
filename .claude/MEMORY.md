@@ -137,31 +137,31 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `feat(exercises): add exercise library screen with search and filter`
 
 ### 1.7 Workout Builder — Backend
-- [ ] Tạo entities: `WorkoutPlan`, `WorkoutDay`, `PlanExercise`
-- [ ] Tạo EF config + migration
-- [ ] Tạo `CreateWorkoutPlanCommand` + handler
-- [ ] Tạo `UpdateWorkoutPlanCommand` + handler
-- [ ] Tạo `DeleteWorkoutPlanCommand` + handler
-- [ ] Tạo `GetMyPlansQuery` + handler
-- [ ] Tạo `WorkoutPlansController`
-- [ ] commit: `feat(workout-plans): add workout plan CRUD endpoints`
+- [x] Tạo entities: `WorkoutPlan`, `WorkoutDay`, `PlanExercise`
+- [x] Tạo EF config + migration
+- [x] Tạo `CreateWorkoutPlanCommand` + handler
+- [x] Tạo `UpdateWorkoutPlanCommand` + handler
+- [x] Tạo `DeleteWorkoutPlanCommand` + handler
+- [x] Tạo `GetMyPlansQuery` + handler
+- [x] Tạo `WorkoutPlansController`
+- [x] commit: `feat(workout-plans): add workout plan CRUD endpoints`
 
 ### 1.8 Workout Builder — Frontend
-- [ ] Tạo `features/workout-plans/` (api, hooks, query-keys, types)
-- [ ] Tạo `components/workout/WorkoutDayCard.tsx`
-- [ ] Tạo `app/(tabs)/index.tsx` — Home: lịch tập hôm nay + weekly overview
-- [ ] Tạo `app/workout/create.tsx` — builder: chọn ngày, thêm bài tập
-- [ ] commit: `feat(workout-plans): add workout builder and home screen`
+- [x] Tạo `features/workout-plans/` (api, hooks, query-keys, types)
+- [x] Tạo `components/workout/WorkoutDayCard.tsx`
+- [x] Tạo `app/(tabs)/index.tsx` — Home: lịch tập hôm nay + weekly overview
+- [x] Tạo `app/workout/create.tsx` — builder: chọn ngày, thêm bài tập
+- [x] commit: `feat(workout-plans): add workout builder and home screen`
 
 ### 1.9 Session Logging — Backend
-- [ ] Tạo entities: `WorkoutSession`, `ExerciseLog`, `SetLog`
-- [ ] Tạo EF config + migration
-- [ ] Tạo `StartSessionCommand` + handler
-- [ ] Tạo `LogSetCommand` + handler
-- [ ] Tạo `CompleteSessionCommand` + handler + raise `WorkoutSessionCompletedEvent`
-- [ ] Tạo `GetSessionHistoryQuery` + handler
-- [ ] Tạo `WorkoutSessionsController`
-- [ ] commit: `feat(sessions): add workout session logging with domain event on complete`
+- [x] Tạo entities: `WorkoutSession`, `ExerciseLog`, `SetLog`
+- [x] Tạo EF config + migration
+- [x] Tạo `StartSessionCommand` + handler
+- [x] Tạo `LogSetCommand` + handler
+- [x] Tạo `CompleteSessionCommand` + handler + raise `WorkoutSessionCompletedEvent`
+- [x] Tạo `GetSessionHistoryQuery` + handler
+- [x] Tạo `WorkoutSessionsController`
+- [x] commit: `feat(sessions): add workout session logging with domain event on complete`
 
 ### 1.10 Session Logging — Frontend
 - [ ] Tạo `features/workout-sessions/` (api, hooks, store, types)
@@ -287,3 +287,6 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-17 | 1.4 User Profile | c163d85 |
 | 2026-05-17 | 1.5 Exercise Library — Backend | bbacf64 |
 | 2026-05-17 | 1.6 Exercise Library — Frontend | d7850d8 |
+| 2026-05-17 | 1.7 Workout Builder — Backend | 4ee0d68 |
+| 2026-05-17 | 1.8 Workout Builder — Frontend | 1ca2573 |
+| 2026-05-17 | 1.9 Session Logging — Backend | af979e7 |
