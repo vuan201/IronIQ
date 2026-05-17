@@ -9,6 +9,12 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 {
     public DbSet<User> Users => Set<User>();
     public DbSet<Exercise> Exercises => Set<Exercise>();
+    public DbSet<WorkoutPlan> WorkoutPlans => Set<WorkoutPlan>();
+    public DbSet<WorkoutDay> WorkoutDays => Set<WorkoutDay>();
+    public DbSet<PlanExercise> PlanExercises => Set<PlanExercise>();
+    public DbSet<WorkoutSession> WorkoutSessions => Set<WorkoutSession>();
+    public DbSet<ExerciseLog> ExerciseLogs => Set<ExerciseLog>();
+    public DbSet<SetLog> SetLogs => Set<SetLog>();
 
     private IDbContextTransaction? _currentTransaction;
 
