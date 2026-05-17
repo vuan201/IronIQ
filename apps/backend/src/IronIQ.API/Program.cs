@@ -34,6 +34,8 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 
+await IronIQ.Infrastructure.Persistence.DataSeeder.SeedAsync(app.Services);
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

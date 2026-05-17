@@ -8,6 +8,7 @@ namespace IronIQ.Infrastructure.Persistence;
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options), IUnitOfWork
 {
     public DbSet<User> Users => Set<User>();
+    public DbSet<Exercise> Exercises => Set<Exercise>();
 
     private IDbContextTransaction? _currentTransaction;
 
