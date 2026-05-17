@@ -241,9 +241,9 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `feat(ai-coach): add auto-progression suggestions based on session history`
 
 ### 3.3 Session Review
-- [ ] Backend: `GetSessionReviewQuery` — AI tóm tắt buổi tập, so với lần trước
-- [ ] Frontend: Tích hợp vào `app/workout/summary.tsx`
-- [ ] commit: `feat(ai-coach): add AI session review on workout completion`
+- [x] Backend: `GetSessionReviewQuery` — AI tóm tắt buổi tập, so với lần trước
+- [x] Frontend: Tích hợp vào `app/workout/summary.tsx`
+- [x] commit: `feat(ai-coach): add AI session review on workout completion`
 
 ---
 
@@ -298,3 +298,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-18 | 2.3 RevenueCat — Premium Subscription | dbef8d5 |
 | 2026-05-18 | 3.1 AI Chat | 9b0e752 |
 | 2026-05-18 | 3.2 Auto-Progression | 2e5ef82 |
+| 2026-05-18 | 3.3 Session Review | 34190fb |
