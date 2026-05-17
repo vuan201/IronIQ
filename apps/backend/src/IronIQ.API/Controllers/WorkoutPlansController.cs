@@ -1,6 +1,7 @@
 using IronIQ.Application.Common.Models;
 using IronIQ.Application.Features.WorkoutPlans.Commands.CreateWorkoutPlan;
 using IronIQ.Application.Features.WorkoutPlans.Commands.DeleteWorkoutPlan;
+using IronIQ.Application.Features.WorkoutPlans.Commands.GenerateAIPlan;
 using IronIQ.Application.Features.WorkoutPlans.Commands.UpdateWorkoutPlan;
 using IronIQ.Application.Features.WorkoutPlans.Queries.GetMyPlans;
 using MediatR;
@@ -37,6 +38,19 @@ public class WorkoutPlansController(IMediator mediator) : ControllerBase
         return result.IsSuccess ? Ok(result.Value) : MapError(result.Error!);
     }
 
+    [HttpPost("generate")]
+    public async Task<IActionResult> Generate(GenerateAIPlanRequest request, CancellationToken ct)
+    {
+        var command = new GenerateAIPlanCommand(
+            request.Goal,
+            request.FitnessLevel,
+            request.DaysPerWeek,
+            request.AvailableEquipment,
+            request.FocusAreas);
+        var result = await mediator.Send(command, ct);
+        return result.IsSuccess ? CreatedAtAction(nameof(GetMyPlans), result.Value) : MapError(result.Error!);
+    }
+
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> Delete(Guid id, CancellationToken ct)
     {
@@ -51,6 +65,13 @@ public class WorkoutPlansController(IMediator mediator) : ControllerBase
         _ => BadRequest(error.Message)
     };
 }
+
+public record GenerateAIPlanRequest(
+    string Goal,
+    string FitnessLevel,
+    int DaysPerWeek,
+    List<string> AvailableEquipment,
+    List<string> FocusAreas);
 
 public record CreateWorkoutPlanRequest(
     string Name,

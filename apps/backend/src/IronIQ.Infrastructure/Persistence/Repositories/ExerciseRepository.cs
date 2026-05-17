@@ -43,6 +43,9 @@ public class ExerciseRepository(AppDbContext db) : IExerciseRepository
     public async Task<Exercise?> GetByIdAsync(Guid id, CancellationToken ct = default)
         => await db.Exercises.FindAsync([id], ct);
 
+    public async Task<Exercise?> FindByNameAsync(string name, CancellationToken ct = default)
+        => await db.Exercises.FirstOrDefaultAsync(e => e.Name.ToLower() == name.ToLower(), ct);
+
     public Task<bool> ExistsSystemAsync(CancellationToken ct = default)
         => db.Exercises.AnyAsync(e => e.IsSystem, ct);
 

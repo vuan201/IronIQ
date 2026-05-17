@@ -86,6 +86,47 @@
       "validationError": "Vui lòng nhập tên kế hoạch"
     }
   },
+  "aiCoach": {
+    "title": "Tạo lịch tập bằng AI",
+    "goal": "Mục tiêu",
+    "level": "Cấp độ",
+    "daysPerWeek": "Số ngày / tuần",
+    "equipment": "Dụng cụ có sẵn",
+    "focusAreas": "Nhóm cơ ưu tiên",
+    "generate": "Tạo lịch tập",
+    "successTitle": "Thành công!",
+    "successMessage": "Lịch tập AI đã được tạo và thêm vào kế hoạch của bạn.",
+    "generateButton": "Tạo lịch tập bằng AI",
+    "goals": {
+      "build_muscle": "Tăng cơ",
+      "lose_weight": "Giảm cân",
+      "maintain": "Duy trì",
+      "increase_strength": "Tăng sức mạnh",
+      "improve_endurance": "Tăng sức bền"
+    },
+    "levels": {
+      "beginner": "Mới bắt đầu",
+      "intermediate": "Trung cấp",
+      "advanced": "Nâng cao"
+    },
+    "equipmentOptions": {
+      "barbell": "Tạ đòn",
+      "dumbbell": "Tạ đơn",
+      "cables": "Dây cáp",
+      "machines": "Máy tập",
+      "resistance_bands": "Dây kháng lực",
+      "pull_up_bar": "Xà đơn"
+    },
+    "focusOptions": {
+      "chest": "Ngực",
+      "back": "Lưng",
+      "shoulders": "Vai",
+      "arms": "Tay",
+      "legs": "Chân",
+      "core": "Bụng/Core",
+      "full_body": "Toàn thân"
+    }
+  },
   "progress": {
     "title": "Tiến độ",
     "totalSessions": "Buổi tập",

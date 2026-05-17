@@ -105,13 +105,22 @@ export default function HomeScreen() {
           </View>
         )}
 
-        <TouchableOpacity
-          onPress={() => router.push('/workout/create')}
-          activeOpacity={0.8}
-          style={{ backgroundColor: colors.primary, borderRadius: 12, paddingVertical: 14, alignItems: 'center', marginTop: 16, marginBottom: 32 }}
-        >
-          <Text style={{ color: '#FFFFFF', fontWeight: '700', fontSize: 16 }}>{t('home.newPlan')}</Text>
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', gap: 10, marginTop: 16, marginBottom: 32 }}>
+          <TouchableOpacity
+            onPress={() => router.push('/workout/create')}
+            activeOpacity={0.8}
+            style={{ flex: 1, backgroundColor: colors.surface, borderRadius: 12, paddingVertical: 14, alignItems: 'center', borderWidth: 1, borderColor: colors.border }}
+          >
+            <Text style={{ color: colors.text, fontWeight: '700', fontSize: 15 }}>{t('home.newPlan')}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => router.push('/ai-coach/generate')}
+            activeOpacity={0.8}
+            style={{ flex: 1, backgroundColor: colors.primary, borderRadius: 12, paddingVertical: 14, alignItems: 'center' }}
+          >
+            <Text style={{ color: '#FFFFFF', fontWeight: '700', fontSize: 15 }}>{t('aiCoach.generateButton')}</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

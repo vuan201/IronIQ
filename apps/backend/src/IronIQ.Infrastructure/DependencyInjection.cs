@@ -1,4 +1,5 @@
 using IronIQ.Application.Common.Interfaces;
+using IronIQ.Infrastructure.External.Claude;
 using IronIQ.Infrastructure.Persistence;
 using IronIQ.Infrastructure.Persistence.Repositories;
 using IronIQ.Infrastructure.Services;
@@ -25,6 +26,9 @@ public static class DependencyInjection
         services.AddScoped<IExerciseRepository, ExerciseRepository>();
         services.AddScoped<IWorkoutPlanRepository, WorkoutPlanRepository>();
         services.AddScoped<IWorkoutSessionRepository, WorkoutSessionRepository>();
+
+        services.AddHttpClient("claude");
+        services.AddScoped<IAIService, ClaudeAIService>();
 
         return services;
     }
