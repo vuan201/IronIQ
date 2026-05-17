@@ -196,42 +196,42 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 ## GIAI ĐOẠN 2 — Monetization
 
 ### 2.1 Coin System — Backend
-- [ ] Tạo `CoinTransaction` entity (UserId, Amount, Type, Reason, CreatedAt)
-- [ ] Tạo migration
-- [ ] Tạo `EarnFromAdCommand` + handler (validate AdMob server-side callback)
-- [ ] Tạo `SpendCoinsCommand` + handler (kiểm tra balance đủ)
-- [ ] Tạo `GetBalanceQuery`
-- [ ] Tạo `CoinsController`
-- [ ] commit: `feat(coins): add coin system with earn and spend endpoints`
+- [x] Tạo `CoinTransaction` entity (UserId, Amount, Type, Reason, CreatedAt)
+- [x] Tạo migration
+- [x] Tạo `EarnFromAdCommand` + handler (validate AdMob server-side callback)
+- [x] Tạo `SpendCoinsCommand` + handler (kiểm tra balance đủ)
+- [x] Tạo `GetBalanceQuery`
+- [x] Tạo `CoinsController`
+- [x] commit: `feat(coins): add coin system with earn and spend endpoints`
 
 ### 2.2 AdMob Integration
-- [ ] Cài `react-native-google-mobile-ads`
-- [ ] Setup AdMob app ID trong `app.json`
-- [ ] Tạo `features/coins/` (api, hooks, types)
-- [ ] Tạo Rewarded Ad hook `useRewardedAd.ts`
-- [ ] Tích hợp vào màn hình Coins: nút "Xem quảng cáo → +10 xu"
-- [ ] commit: `feat(coins): integrate AdMob rewarded ads for coin earning`
+- [x] Cài `react-native-google-mobile-ads`
+- [x] Setup AdMob app ID trong `app.json`
+- [x] Tạo `features/coins/` (api, hooks, types)
+- [x] Tạo Rewarded Ad hook `useRewardedAd.ts`
+- [x] Tích hợp vào màn hình Coins: nút "Xem quảng cáo → +10 xu"
+- [x] commit: `feat(coins): integrate AdMob rewarded ads for coin earning`
 
 ### 2.3 RevenueCat — Premium Subscription
-- [ ] Cài `react-native-purchases`
-- [ ] Setup RevenueCat project (iOS + Android)
-- [ ] Backend: `ISubscriptionService` + `RevenueCatService` (webhook validate)
-- [ ] Backend: Webhook endpoint `POST /webhooks/revenuecat`
-- [ ] Frontend: `usePermission.ts` — check subscription tier
-- [ ] Frontend: Paywall screen với gói tháng/năm
-- [ ] Frontend: Premium badge trên Profile
-- [ ] Backend: Enforce free tier limits (3 AI plans/tháng, 2 active plans)
-- [ ] commit: `feat(coins): add RevenueCat premium subscription with paywall`
+- [x] Cài `react-native-purchases`
+- [x] Setup RevenueCat project (iOS + Android) ← cần setup thủ công trong RC dashboard
+- [x] Backend: `ISubscriptionService` + `RevenueCatService` (webhook validate)
+- [x] Backend: Webhook endpoint `POST /webhooks/revenuecat`
+- [x] Frontend: `usePermission.ts` — check subscription tier
+- [x] Frontend: Paywall screen với gói tháng/năm
+- [x] Frontend: Premium badge trên Profile
+- [x] Backend: Enforce free tier limits (3 AI plans/tháng, 2 active plans)
+- [x] commit: `feat(coins): add RevenueCat premium subscription with paywall`
 
 ---
 
 ## GIAI ĐOẠN 3 — AI Coach
 
 ### 3.1 AI Chat
-- [ ] Backend: `AskCoachQuery` + handler (context: profile + 5 buổi tập gần nhất)
-- [ ] Backend: `AiCoachController` (`POST /ai-coach/ask`)
-- [ ] Frontend: Tạo `features/ai-coach/store.ts` — conversation history (Zustand)
-- [ ] Frontend: Tạo `app/ai-coach/index.tsx` — chat UI (bubble messages)
+- [~] Backend: `AskCoachQuery` + handler (context: profile + 5 buổi tập gần nhất)
+- [~] Backend: `AiCoachController` (`POST /ai-coach/ask`)
+- [~] Frontend: Tạo `features/ai-coach/store.ts` — conversation history (Zustand)
+- [~] Frontend: Tạo `app/ai-coach/index.tsx` — chat UI (bubble messages)
 - [ ] commit: `feat(ai-coach): add AI coach chat with workout context`
 
 ### 3.2 Auto-Progression
@@ -293,3 +293,6 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-17 | 1.10 Session Logging — Frontend | 32d7302 |
 | 2026-05-17 | 1.11 Progress Charts | baed80a |
 | 2026-05-17 | 1.12 AI Plan Generation | 9f3f280 |
+| 2026-05-18 | 2.1 Coin System — Backend | 3747b26 |
+| 2026-05-18 | 2.2 AdMob Integration | bf1eb55 |
+| 2026-05-18 | 2.3 RevenueCat — Premium Subscription | dbef8d5 |

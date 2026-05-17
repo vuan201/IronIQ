@@ -90,6 +90,11 @@
   },
   "aiCoach": {
     "title": "AI Workout Generator",
+    "chatTitle": "AI Coach",
+    "chatPlaceholder": "Ask your coach...",
+    "chatButton": "Chat with AI Coach",
+    "thinking": "Thinking...",
+    "clearHistory": "Clear",
     "goal": "Goal",
     "level": "Fitness Level",
     "daysPerWeek": "Days per week",

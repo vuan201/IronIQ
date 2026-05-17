@@ -90,6 +90,11 @@
   },
   "aiCoach": {
     "title": "Tạo lịch tập bằng AI",
+    "chatTitle": "AI Coach",
+    "chatPlaceholder": "Hỏi huấn luyện viên...",
+    "chatButton": "Chat với AI Coach",
+    "thinking": "Đang suy nghĩ...",
+    "clearHistory": "Xóa lịch sử",
     "goal": "Mục tiêu",
     "level": "Cấp độ",
     "daysPerWeek": "Số ngày / tuần",

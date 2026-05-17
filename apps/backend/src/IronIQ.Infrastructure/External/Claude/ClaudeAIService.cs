@@ -21,6 +21,27 @@ public class ClaudeAIService(IHttpClientFactory httpClientFactory, IConfiguratio
             messages = new[] { new { role = "user", content = prompt } }
         };
 
+        return await SendAsync(apiKey, requestBody, ct);
+    }
+
+    public async Task<string> ChatAsync(string systemPrompt, IList<ChatMessage> messages, int maxTokens = 1024, CancellationToken ct = default)
+    {
+        var apiKey = configuration["Claude:ApiKey"] ?? throw new InvalidOperationException("Claude:ApiKey not configured.");
+        var model = configuration["Claude:Model"] ?? "claude-sonnet-4-6";
+
+        var requestBody = new
+        {
+            model,
+            max_tokens = maxTokens,
+            system = systemPrompt,
+            messages = messages.Select(m => new { role = m.Role, content = m.Content }).ToArray()
+        };
+
+        return await SendAsync(apiKey, requestBody, ct);
+    }
+
+    private async Task<string> SendAsync(string apiKey, object requestBody, CancellationToken ct)
+    {
         var client = httpClientFactory.CreateClient("claude");
         using var request = new HttpRequestMessage(HttpMethod.Post, "https://api.anthropic.com/v1/messages");
         request.Headers.Add("x-api-key", apiKey);

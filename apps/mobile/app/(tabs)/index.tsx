@@ -105,7 +105,7 @@ export default function HomeScreen() {
           </View>
         )}
 
-        <View style={{ flexDirection: 'row', gap: 10, marginTop: 16, marginBottom: 32 }}>
+        <View style={{ flexDirection: 'row', gap: 10, marginTop: 16, marginBottom: 8 }}>
           <TouchableOpacity
             onPress={() => router.push('/workout/create')}
             activeOpacity={0.8}
@@ -121,6 +121,13 @@ export default function HomeScreen() {
             <Text style={{ color: '#FFFFFF', fontWeight: '700', fontSize: 15 }}>{t('aiCoach.generateButton')}</Text>
           </TouchableOpacity>
         </View>
+        <TouchableOpacity
+          onPress={() => router.push('/ai-coach')}
+          activeOpacity={0.8}
+          style={{ backgroundColor: colors.surface, borderRadius: 12, paddingVertical: 14, alignItems: 'center', marginBottom: 32, borderWidth: 1, borderColor: colors.border }}
+        >
+          <Text style={{ color: colors.primary, fontWeight: '700', fontSize: 15 }}>{t('aiCoach.chatButton')}</Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
