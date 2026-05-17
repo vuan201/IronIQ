@@ -55,4 +55,18 @@ public class User
         RefreshTokenHash = null;
         RefreshTokenExpiry = null;
     }
+
+    public bool EarnCoins(int amount)
+    {
+        if (amount <= 0) return false;
+        CoinBalance += amount;
+        return true;
+    }
+
+    public bool SpendCoins(int amount)
+    {
+        if (amount <= 0 || CoinBalance < amount) return false;
+        CoinBalance -= amount;
+        return true;
+    }
 }
