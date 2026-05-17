@@ -228,11 +228,11 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 ## GIAI ĐOẠN 3 — AI Coach
 
 ### 3.1 AI Chat
-- [~] Backend: `AskCoachQuery` + handler (context: profile + 5 buổi tập gần nhất)
-- [~] Backend: `AiCoachController` (`POST /ai-coach/ask`)
-- [~] Frontend: Tạo `features/ai-coach/store.ts` — conversation history (Zustand)
-- [~] Frontend: Tạo `app/ai-coach/index.tsx` — chat UI (bubble messages)
-- [ ] commit: `feat(ai-coach): add AI coach chat with workout context`
+- [x] Backend: `AskCoachQuery` + handler (context: profile + 5 buổi tập gần nhất)
+- [x] Backend: `AiCoachController` (`POST /ai-coach/ask`)
+- [x] Frontend: Tạo `features/ai-coach/store.ts` — conversation history (Zustand)
+- [x] Frontend: Tạo `app/ai-coach/index.tsx` — chat UI (bubble messages)
+- [x] commit: `feat(ai-coach): add AI coach chat with workout context`
 
 ### 3.2 Auto-Progression
 - [ ] Backend: `AutoProgressionHandler` — lắng nghe `WorkoutSessionCompletedEvent`
@@ -296,3 +296,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-18 | 2.1 Coin System — Backend | 3747b26 |
 | 2026-05-18 | 2.2 AdMob Integration | bf1eb55 |
 | 2026-05-18 | 2.3 RevenueCat — Premium Subscription | dbef8d5 |
+| 2026-05-18 | 3.1 AI Chat | 9b0e752 |
