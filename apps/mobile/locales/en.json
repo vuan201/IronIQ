@@ -86,6 +86,14 @@
       "validationError": "Please enter a plan name"
     }
   },
+  "progress": {
+    "title": "Progress",
+    "totalSessions": "Sessions",
+    "totalSets": "Sets Done",
+    "weeklyFrequency": "Workouts / week",
+    "recentVolume": "Recent Volume (kg)",
+    "noData": "No data yet. Complete your first workout!"
+  },
   "session": {
     "title": "Workout",
     "progress": "{{done}}/{{total}} sets",

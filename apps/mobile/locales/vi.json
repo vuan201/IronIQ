@@ -86,6 +86,14 @@
       "validationError": "Vui lòng nhập tên kế hoạch"
     }
   },
+  "progress": {
+    "title": "Tiến độ",
+    "totalSessions": "Buổi tập",
+    "totalSets": "Set đã làm",
+    "weeklyFrequency": "Tần suất tập / tuần",
+    "recentVolume": "Khối lượng gần đây (kg)",
+    "noData": "Chưa có dữ liệu. Hãy hoàn thành buổi tập đầu tiên!"
+  },
   "session": {
     "title": "Buổi tập",
     "progress": "{{done}}/{{total}} set",
