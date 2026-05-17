@@ -1,5 +1,6 @@
 using IronIQ.Application.Common.Interfaces;
 using IronIQ.Infrastructure.Persistence;
+using IronIQ.Infrastructure.Persistence.Repositories;
 using IronIQ.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +19,9 @@ public static class DependencyInjection
 
         services.AddHttpContextAccessor();
         services.AddScoped<ICurrentUserService, CurrentUserService>();
+        services.AddScoped<IJwtService, JwtService>();
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
+        services.AddScoped<IUserRepository, UserRepository>();
 
         return services;
     }

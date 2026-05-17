@@ -1,4 +1,5 @@
 using IronIQ.Application.Common.Interfaces;
+using IronIQ.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
@@ -6,6 +7,8 @@ namespace IronIQ.Infrastructure.Persistence;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options), IUnitOfWork
 {
+    public DbSet<User> Users => Set<User>();
+
     private IDbContextTransaction? _currentTransaction;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
