@@ -85,57 +85,56 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 ## GIAI ĐOẠN 1 — MVP Core
 
 ### 1.1 Auth — Backend
-- [ ] Tạo `User` entity (Id, Email, PasswordHash, CreatedAt, SubscriptionTier, CoinBalance)
-- [ ] Tạo `UserProfile` value object (Name, Age, Height, Weight, Goal, FitnessLevel)
-- [ ] Tạo enum `FitnessGoal`, `FitnessLevel`, `SubscriptionTier`
-- [ ] Tạo EF config + migration: `dotnet ef migrations add InitialCreate`
-- [ ] Tạo `RegisterCommand` + `RegisterCommandHandler` + `RegisterValidator`
-- [ ] Tạo `LoginCommand` + `LoginCommandHandler` (BCrypt verify + JWT generate)
-- [ ] Tạo `RefreshTokenCommand` + handler
-- [ ] Tạo `AuthController` (`POST /auth/register`, `POST /auth/login`, `POST /auth/refresh`)
-- [ ] commit: `feat(auth): add register, login and refresh token endpoints`
+- [x] Tạo `User` entity (Id, Email, PasswordHash, CreatedAt, SubscriptionTier, CoinBalance)
+- [x] Tạo `UserProfile` value object (Name, Age, Height, Weight, Goal, FitnessLevel)
+- [x] Tạo enum `FitnessGoal`, `FitnessLevel`, `SubscriptionTier`
+- [x] Tạo EF config + migration: `dotnet ef migrations add InitialCreate`
+- [x] Tạo `RegisterCommand` + `RegisterCommandHandler` + `RegisterValidator`
+- [x] Tạo `LoginCommand` + `LoginCommandHandler` (BCrypt verify + JWT generate)
+- [x] Tạo `RefreshTokenCommand` + handler
+- [x] Tạo `AuthController` (`POST /auth/register`, `POST /auth/login`, `POST /auth/refresh`)
+- [x] commit: `feat(auth): add register, login and refresh token endpoints`
 
 ### 1.2 Auth — Frontend
-- [ ] Tạo `features/auth/types.ts`
-- [ ] Tạo `features/auth/api.ts` — `register()`, `login()`, `refreshToken()`
-- [ ] Tạo `features/auth/store.ts` — Zustand: `accessToken`, `refreshToken`, `user`
-- [ ] Cập nhật `lib/api.ts` — gắn JWT interceptor + auto refresh khi 401
-- [ ] Tạo `app/(auth)/_layout.tsx` + `login.tsx` + `register.tsx` (UI)
-- [ ] Tạo auth guard trong `app/_layout.tsx` — redirect dựa trên token
-- [ ] commit: `feat(auth): add login and register screens with JWT auth flow`
+- [x] Tạo `features/auth/types.ts`
+- [x] Tạo `features/auth/api.ts` — `register()`, `login()`, `refreshToken()`
+- [x] Tạo `features/auth/store.ts` — Zustand: `accessToken`, `refreshToken`, `user`
+- [x] Cập nhật `lib/api.ts` — gắn JWT interceptor + auto refresh khi 401
+- [x] Tạo `app/(auth)/_layout.tsx` + `login.tsx` + `register.tsx` (UI)
+- [x] Tạo auth guard trong `app/_layout.tsx` — redirect dựa trên token
+- [x] commit: `feat(auth): add login and register screens with JWT auth flow`
 
 ### 1.3 Guest Mode
-- [ ] Tạo `lib/offline-db.ts` — khởi tạo SQLite schema cho guest data
-- [ ] Tạo `app/(guest)/onboarding.tsx` — chọn "Dùng ngay" vs "Đăng nhập"
-- [ ] Tạo `lib/sync.ts` — sync offline data lên server khi guest → login
-- [ ] commit: `feat(auth): add guest mode with offline sqlite storage`
+- [x] Tạo `lib/offline-db.ts` — khởi tạo SQLite schema cho guest data
+- [x] Tạo `app/(guest)/onboarding.tsx` — chọn "Dùng ngay" vs "Đăng nhập"
+- [x] Tạo `lib/sync.ts` — sync offline data lên server khi guest → login
+- [x] commit: `feat(auth): add guest mode with offline sqlite storage`
 
 ### 1.4 User Profile
-- [ ] Tạo `UpdateProfileCommand` + handler
-- [ ] Tạo `GetMyProfileQuery` + handler
-- [ ] Tạo `UsersController` (`GET /users/me`, `PUT /users/me`)
-- [ ] Tạo `features/users/` (api, hooks, types)
-- [ ] Tạo `app/(tabs)/profile.tsx` — form chỉnh sửa profile
-- [ ] commit: `feat(users): add profile view and edit with personal metrics`
+- [x] Tạo `UpdateProfileCommand` + handler
+- [x] Tạo `GetMyProfileQuery` + handler
+- [x] Tạo `UsersController` (`GET /users/me`, `PUT /users/me`)
+- [x] Tạo `features/users/` (api, hooks, types)
+- [x] Tạo `app/(tabs)/profile.tsx` — form chỉnh sửa profile
+- [x] commit: `feat(users): add profile view and edit with personal metrics`
 
 ### 1.5 Exercise Library — Backend
-- [ ] Tạo `Exercise` entity (Id, Name, Description, MuscleGroups[], Equipment[], Difficulty, IsSystem, CreatedByUserId)
-- [ ] Tạo EF config + migration
-- [ ] Tạo seed file JSON (~100 bài tập hệ thống)
-- [ ] Tạo `DataSeeder` chạy khi startup
-- [ ] Tạo `GetExercisesQuery` + handler (filter: muscle, equipment, difficulty; search; pagination)
-- [ ] Tạo `GetExerciseByIdQuery` + handler
-- [ ] Tạo `CreateExerciseCommand` + handler (user-created)
-- [ ] Tạo `ExercisesController` (`GET /exercises`, `GET /exercises/{id}`, `POST /exercises`)
-- [ ] commit: `feat(exercises): add exercise library with seed data and CRUD endpoints`
+- [x] Tạo `Exercise` entity (Id, Name, Description, MuscleGroups[], Equipment[], Difficulty, IsSystem, CreatedByUserId)
+- [x] Tạo EF config + migration
+- [x] Tạo `DataSeeder` với 32 bài tập hệ thống (chest/back/shoulders/biceps/triceps/legs/abs/cardio)
+- [x] Tạo `GetExercisesQuery` + handler (filter: muscle, equipment, difficulty; search; pagination)
+- [x] Tạo `GetExerciseByIdQuery` + handler
+- [x] Tạo `CreateExerciseCommand` + handler (user-created)
+- [x] Tạo `ExercisesController` (`GET /exercises`, `GET /exercises/{id}`, `POST /exercises`)
+- [x] commit: `feat(exercises): add exercise library with seed data and CRUD endpoints`
 
 ### 1.6 Exercise Library — Frontend
-- [ ] Tạo `features/exercises/` (api, hooks, query-keys, types)
-- [ ] Tạo `components/workout/ExerciseCard.tsx`
-- [ ] Tạo `app/(tabs)/explore.tsx` — danh sách + search + filter chip
-- [ ] Tạo `components/ui/Skeleton.tsx` — loading placeholder
-- [ ] Tạo màn hình tạo bài tập tùy chỉnh
-- [ ] commit: `feat(exercises): add exercise library screen with search and filter`
+- [x] Tạo `features/exercises/` (api, hooks, query-keys, types)
+- [x] Tạo `components/workout/ExerciseCard.tsx`
+- [x] Tạo `app/(tabs)/explore.tsx` — danh sách + search + filter chip
+- [x] Tạo `components/ui/Skeleton.tsx` — loading placeholder
+- [x] Tạo màn hình tạo bài tập tùy chỉnh (`app/exercise/create.tsx`)
+- [x] commit: `feat(exercises): add exercise library screen with search and filter`
 
 ### 1.7 Workout Builder — Backend
 - [ ] Tạo entities: `WorkoutPlan`, `WorkoutDay`, `PlanExercise`
@@ -282,3 +281,9 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-17 | 0.3 Backend Skeleton Infrastructure | 67dbdd6 |
 | 2026-05-17 | 0.4 Frontend Expo Project | 2a78e6f |
 | 2026-05-17 | 0.5 Frontend Foundation Layer | a493371 |
+| 2026-05-17 | 1.1 Auth — Backend | 2816edb |
+| 2026-05-17 | 1.2 Auth — Frontend | ea25a32 |
+| 2026-05-17 | 1.3 Guest Mode | a3b41ea |
+| 2026-05-17 | 1.4 User Profile | c163d85 |
+| 2026-05-17 | 1.5 Exercise Library — Backend | bbacf64 |
+| 2026-05-17 | 1.6 Exercise Library — Frontend | d7850d8 |
