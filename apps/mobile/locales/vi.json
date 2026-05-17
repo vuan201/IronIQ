@@ -29,6 +29,11 @@
       "emailTaken": "Email này đã được đăng ký"
     }
   },
+  "onboarding": {
+    "subtitle": "Trợ lý tập gym thông minh của bạn",
+    "loginButton": "Đăng nhập / Đăng ký",
+    "guestButton": "Dùng thử không cần tài khoản"
+  },
   "exercises": {
     "card": {
       "difficulty": "Độ khó",

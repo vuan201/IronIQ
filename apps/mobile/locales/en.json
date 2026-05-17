@@ -29,6 +29,11 @@
       "emailTaken": "This email is already registered"
     }
   },
+  "onboarding": {
+    "subtitle": "Your smart gym training assistant",
+    "loginButton": "Login / Register",
+    "guestButton": "Try without an account"
+  },
   "exercises": {
     "card": {
       "difficulty": "Difficulty",
