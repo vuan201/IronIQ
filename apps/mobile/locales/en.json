@@ -43,6 +43,8 @@
     "goal": "Goal",
     "level": "Level",
     "subscription": "Subscription",
+    "freeTier": "Free",
+    "upgradeCta": "Upgrade",
     "logout": "Log out"
   },
   "onboarding": {
@@ -163,6 +165,20 @@
     "earnSuccess": "+10 coins earned!",
     "earnError": "Failed to claim reward. Please try again.",
     "alreadyClaimed": "This reward has already been claimed."
+  },
+  "paywall": {
+    "title": "Go Premium",
+    "subtitle": "Unlock unlimited access to all features",
+    "benefit1": "Unlimited workout plans",
+    "benefit2": "Unlimited AI-generated plans",
+    "benefit3": "Priority AI coach responses",
+    "monthly": "Monthly",
+    "annual": "Annual (Best Value)",
+    "restore": "Restore purchases",
+    "notAvailable": "Subscriptions not available right now.",
+    "successMessage": "Welcome to Premium! Enjoy unlimited access.",
+    "restoreSuccess": "Purchases restored successfully.",
+    "restoreNotFound": "No previous purchases found."
   },
   "exercises": {
     "title": "Exercise library",

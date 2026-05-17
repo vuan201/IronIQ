@@ -4,6 +4,7 @@ import { Stack, useRouter, useSegments } from 'expo-router';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '../lib/query-client';
 import { useAuthStore } from '@/features/auth/store';
+import { useConfigureRevenueCat } from '@/features/subscription/hooks';
 
 function AuthGuard() {
   const router = useRouter();
@@ -24,10 +25,17 @@ function AuthGuard() {
   return null;
 }
 
+function RevenueCatInit() {
+  const user = useAuthStore((s) => s.user);
+  useConfigureRevenueCat(user?.userId ?? null);
+  return null;
+}
+
 export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthGuard />
+      <RevenueCatInit />
       <Stack screenOptions={{ headerShown: false }} />
     </QueryClientProvider>
   );

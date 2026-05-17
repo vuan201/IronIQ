@@ -62,6 +62,7 @@ public class WorkoutPlansController(IMediator mediator) : ControllerBase
     {
         ErrorType.NotFound => NotFound(error.Message),
         ErrorType.Unauthorized => Unauthorized(error.Message),
+        ErrorType.Conflict => Conflict(error.Message),
         _ => BadRequest(error.Message)
     };
 }

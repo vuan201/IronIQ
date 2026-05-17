@@ -69,4 +69,9 @@ public class User
         CoinBalance -= amount;
         return true;
     }
+
+    public void UpdateSubscriptionTier(SubscriptionTier tier)
+    {
+        SubscriptionTier = tier;
+    }
 }

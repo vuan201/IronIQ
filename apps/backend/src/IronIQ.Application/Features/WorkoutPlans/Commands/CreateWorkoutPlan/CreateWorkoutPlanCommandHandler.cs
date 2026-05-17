@@ -2,12 +2,14 @@ using IronIQ.Application.Common.Interfaces;
 using IronIQ.Application.Common.Models;
 using IronIQ.Application.Features.WorkoutPlans.DTOs;
 using IronIQ.Domain.Entities;
+using IronIQ.Domain.Enums;
 using MediatR;
 
 namespace IronIQ.Application.Features.WorkoutPlans.Commands.CreateWorkoutPlan;
 
 public class CreateWorkoutPlanCommandHandler(
     IWorkoutPlanRepository repository,
+    IUserRepository userRepository,
     ICurrentUserService currentUser,
     IUnitOfWork unitOfWork)
     : IRequestHandler<CreateWorkoutPlanCommand, Result<WorkoutPlanDto>>
@@ -16,6 +18,16 @@ public class CreateWorkoutPlanCommandHandler(
     {
         if (!currentUser.IsAuthenticated || currentUser.UserId is null)
             return Result<WorkoutPlanDto>.Failure(Error.Unauthorized());
+
+        var user = await userRepository.GetByIdAsync(currentUser.UserId.Value, ct);
+        if (user is null) return Result<WorkoutPlanDto>.Failure(Error.Unauthorized());
+
+        if (user.SubscriptionTier == SubscriptionTier.Free)
+        {
+            var activeCount = await repository.CountActiveByUserIdAsync(currentUser.UserId.Value, ct);
+            if (activeCount >= 2)
+                return Result<WorkoutPlanDto>.Failure(Error.Conflict("Free tier allows up to 2 active plans. Upgrade to Premium for unlimited plans."));
+        }
 
         var plan = WorkoutPlan.Create(currentUser.UserId.Value, command.Name, command.Description);
 

@@ -138,12 +138,24 @@ export default function ProfileScreen() {
           )}
         </View>
 
-        <View style={{ backgroundColor: colors.surface, borderRadius: 16, padding: 16, marginBottom: 16 }}>
-          <Text style={{ fontSize: 13, color: colors.textSecondary, marginBottom: 4 }}>
-            {t('profile.subscription')}
-          </Text>
-          <Text style={{ fontSize: 15, color: colors.text }}>{profile?.subscriptionTier}</Text>
-        </View>
+        <TouchableOpacity
+          onPress={() => profile?.subscriptionTier !== 'Premium' && router.push('/paywall')}
+          style={{ backgroundColor: colors.surface, borderRadius: 16, padding: 16, marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+        >
+          <View>
+            <Text style={{ fontSize: 13, color: colors.textSecondary, marginBottom: 4 }}>
+              {t('profile.subscription')}
+            </Text>
+            <Text style={{ fontSize: 15, color: colors.text, fontWeight: '600' }}>
+              {profile?.subscriptionTier === 'Premium' ? '👑 Premium' : t('profile.freeTier')}
+            </Text>
+          </View>
+          {profile?.subscriptionTier !== 'Premium' && (
+            <Text style={{ fontSize: 13, color: colors.primary, fontWeight: '600' }}>
+              {t('profile.upgradeCta')} →
+            </Text>
+          )}
+        </TouchableOpacity>
 
         <TouchableOpacity
           onPress={() => router.push('/coins')}

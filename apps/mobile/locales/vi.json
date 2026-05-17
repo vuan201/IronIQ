@@ -43,6 +43,8 @@
     "goal": "Mục tiêu",
     "level": "Cấp độ",
     "subscription": "Gói đăng ký",
+    "freeTier": "Miễn phí",
+    "upgradeCta": "Nâng cấp",
     "logout": "Đăng xuất"
   },
   "onboarding": {
@@ -163,6 +165,20 @@
     "earnSuccess": "+10 xu đã được cộng!",
     "earnError": "Không thể nhận thưởng. Vui lòng thử lại.",
     "alreadyClaimed": "Phần thưởng này đã được nhận rồi."
+  },
+  "paywall": {
+    "title": "Nâng lên Premium",
+    "subtitle": "Mở khóa toàn bộ tính năng không giới hạn",
+    "benefit1": "Kế hoạch tập không giới hạn",
+    "benefit2": "Tạo lịch AI không giới hạn",
+    "benefit3": "Phản hồi AI coach ưu tiên",
+    "monthly": "Hàng tháng",
+    "annual": "Hàng năm (Tiết kiệm nhất)",
+    "restore": "Khôi phục mua hàng",
+    "notAvailable": "Gói đăng ký hiện chưa sẵn sàng.",
+    "successMessage": "Chào mừng Premium! Tận hưởng truy cập không giới hạn.",
+    "restoreSuccess": "Đã khôi phục mua hàng thành công.",
+    "restoreNotFound": "Không tìm thấy lịch sử mua hàng."
   },
   "exercises": {
     "title": "Thư viện bài tập",

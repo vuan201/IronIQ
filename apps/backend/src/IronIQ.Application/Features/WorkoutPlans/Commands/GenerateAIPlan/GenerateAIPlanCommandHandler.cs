@@ -12,6 +12,7 @@ public class GenerateAIPlanCommandHandler(
     IAIService aiService,
     IWorkoutPlanRepository planRepository,
     IExerciseRepository exerciseRepository,
+    IUserRepository userRepository,
     ICurrentUserService currentUser,
     IUnitOfWork unitOfWork)
     : IRequestHandler<GenerateAIPlanCommand, Result<WorkoutPlanDto>>
@@ -22,6 +23,16 @@ public class GenerateAIPlanCommandHandler(
     {
         if (!currentUser.IsAuthenticated || currentUser.UserId is null)
             return Result<WorkoutPlanDto>.Failure(Error.Unauthorized());
+
+        var user = await userRepository.GetByIdAsync(currentUser.UserId.Value, ct);
+        if (user is null) return Result<WorkoutPlanDto>.Failure(Error.Unauthorized());
+
+        if (user.SubscriptionTier == SubscriptionTier.Free)
+        {
+            var aiCount = await planRepository.CountAIGeneratedThisMonthAsync(currentUser.UserId.Value, ct);
+            if (aiCount >= 3)
+                return Result<WorkoutPlanDto>.Failure(Error.Conflict("Free tier allows 3 AI-generated plans per month. Upgrade to Premium for unlimited plans."));
+        }
 
         var prompt = PromptBuilder.BuildGeneratePlanPrompt(command);
         var rawJson = await aiService.CompleteAsync(prompt, maxTokens: 2048, ct: ct);
@@ -39,7 +50,7 @@ public class GenerateAIPlanCommandHandler(
         if (parsed is null)
             return Result<WorkoutPlanDto>.Failure(Error.Failure("AI returned an empty response."));
 
-        var plan = WorkoutPlan.Create(currentUser.UserId.Value, parsed.Name, parsed.Description);
+        var plan = WorkoutPlan.Create(currentUser.UserId.Value, parsed.Name, parsed.Description, isAIGenerated: true);
 
         var days = new List<WorkoutDay>();
         foreach (var d in parsed.Days)

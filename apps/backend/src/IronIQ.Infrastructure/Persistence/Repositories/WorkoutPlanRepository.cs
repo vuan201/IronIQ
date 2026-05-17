@@ -30,4 +30,14 @@ public class WorkoutPlanRepository(AppDbContext db) : IWorkoutPlanRepository
         db.WorkoutPlans.Remove(plan);
         return Task.CompletedTask;
     }
+
+    public async Task<int> CountActiveByUserIdAsync(Guid userId, CancellationToken ct = default)
+        => await db.WorkoutPlans.CountAsync(p => p.UserId == userId && p.IsActive, ct);
+
+    public async Task<int> CountAIGeneratedThisMonthAsync(Guid userId, CancellationToken ct = default)
+    {
+        var startOfMonth = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, 1, 0, 0, 0, DateTimeKind.Utc);
+        return await db.WorkoutPlans
+            .CountAsync(p => p.UserId == userId && p.IsAIGenerated && p.CreatedAt >= startOfMonth, ct);
+    }
 }

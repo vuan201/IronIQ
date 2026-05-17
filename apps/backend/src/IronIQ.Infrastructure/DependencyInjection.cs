@@ -1,5 +1,6 @@
 using IronIQ.Application.Common.Interfaces;
 using IronIQ.Infrastructure.External.Claude;
+using IronIQ.Infrastructure.External.RevenueCat;
 using IronIQ.Infrastructure.Persistence;
 using IronIQ.Infrastructure.Persistence.Repositories;
 using IronIQ.Infrastructure.Services;
@@ -30,6 +31,7 @@ public static class DependencyInjection
 
         services.AddHttpClient("claude");
         services.AddScoped<IAIService, ClaudeAIService>();
+        services.AddScoped<ISubscriptionService, RevenueCatService>();
 
         return services;
     }
