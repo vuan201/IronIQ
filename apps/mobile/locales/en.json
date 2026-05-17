@@ -50,6 +50,42 @@
     "loginButton": "Login / Register",
     "guestButton": "Try without an account"
   },
+  "home": {
+    "title": "Home",
+    "subtitle": "Welcome back!",
+    "todaySection": "Today",
+    "noWorkoutToday": "No workout scheduled today. Rest or create a new plan.",
+    "myPlans": "My Plans",
+    "noPlans": "You don't have any workout plans yet.",
+    "createPlan": "Create plan",
+    "newPlan": "+ New Plan",
+    "planDays": "{{count}} days / week"
+  },
+  "workoutPlans": {
+    "days": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "dayCard": {
+      "exerciseCount": "{{count}} exercises",
+      "more": "more"
+    },
+    "create": {
+      "title": "Create workout plan",
+      "name": "Plan name",
+      "namePlaceholder": "E.g. Push/Pull/Legs",
+      "description": "Description",
+      "descriptionPlaceholder": "Goal, notes...",
+      "selectDays": "Select training days",
+      "addExercisesLater": "You can add exercises after creating the plan.",
+      "validationError": "Please enter a plan name"
+    }
+  },
   "exercises": {
     "title": "Exercise library",
     "search": "Search exercises...",

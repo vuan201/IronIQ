@@ -50,6 +50,42 @@
     "loginButton": "Đăng nhập / Đăng ký",
     "guestButton": "Dùng thử không cần tài khoản"
   },
+  "home": {
+    "title": "Trang chủ",
+    "subtitle": "Chào mừng trở lại!",
+    "todaySection": "Hôm nay",
+    "noWorkoutToday": "Hôm nay không có lịch tập. Nghỉ ngơi hoặc tạo kế hoạch mới.",
+    "myPlans": "Kế hoạch của tôi",
+    "noPlans": "Bạn chưa có kế hoạch tập nào.",
+    "createPlan": "Tạo kế hoạch",
+    "newPlan": "+ Kế hoạch mới",
+    "planDays": "{{count}} ngày / tuần"
+  },
+  "workoutPlans": {
+    "days": {
+      "mon": "T2",
+      "tue": "T3",
+      "wed": "T4",
+      "thu": "T5",
+      "fri": "T6",
+      "sat": "T7",
+      "sun": "CN"
+    },
+    "dayCard": {
+      "exerciseCount": "{{count}} bài",
+      "more": "bài nữa"
+    },
+    "create": {
+      "title": "Tạo kế hoạch tập",
+      "name": "Tên kế hoạch",
+      "namePlaceholder": "Ví dụ: Push/Pull/Legs",
+      "description": "Mô tả",
+      "descriptionPlaceholder": "Mục tiêu, ghi chú...",
+      "selectDays": "Chọn ngày tập trong tuần",
+      "addExercisesLater": "Bạn có thể thêm bài tập sau khi tạo kế hoạch.",
+      "validationError": "Vui lòng nhập tên kế hoạch"
+    }
+  },
   "exercises": {
     "title": "Thư viện bài tập",
     "search": "Tìm kiếm bài tập...",
