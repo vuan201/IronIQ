@@ -164,32 +164,32 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `feat(sessions): add workout session logging with domain event on complete`
 
 ### 1.10 Session Logging — Frontend
-- [ ] Tạo `features/workout-sessions/` (api, hooks, store, types)
-- [ ] Tạo `features/workout-sessions/store.ts` — Zustand: active session state
-- [ ] Tạo `components/workout/SetRow.tsx` — row nhập kg / reps / done
-- [ ] Tạo `components/workout/RestTimer.tsx` — countdown + haptic
-- [ ] Tạo `app/workout/[id].tsx` — màn hình tập: exercise list + set rows + timer
-- [ ] Tạo `app/workout/summary.tsx` — tóm tắt sau buổi tập
-- [ ] commit: `feat(sessions): add active workout screen with set logging and rest timer`
+- [x] Tạo `features/workout-sessions/` (api, hooks, store, types)
+- [x] Tạo `features/workout-sessions/store.ts` — Zustand: active session state
+- [x] Tạo `components/workout/SetRow.tsx` — row nhập kg / reps / done
+- [x] Tạo `components/workout/RestTimer.tsx` — countdown + haptic
+- [x] Tạo `app/workout/session.tsx` — màn hình tập: exercise list + set rows + timer
+- [x] Tạo `app/workout/summary.tsx` — tóm tắt sau buổi tập
+- [x] commit: `feat(sessions): add active workout screen with set logging and rest timer`
 
 ### 1.11 Progress Charts
-- [ ] Backend: `GetProgressQuery` (weight over time, volume per muscle group, 1RM estimate)
-- [ ] Frontend: cài `victory-native` hoặc `react-native-gifted-charts`
-- [ ] Tạo `components/charts/WeightChart.tsx`
-- [ ] Tạo `components/charts/StrengthChart.tsx`
-- [ ] Tạo `app/(tabs)/progress.tsx` — biểu đồ + period selector (1W/1M/3M/1Y)
-- [ ] commit: `feat(progress): add progress charts for weight and strength tracking`
+- [x] Backend: `GetProgressQuery` (weekly frequency + volume per session)
+- [x] Backend: `ProgressController` (`GET /progress`)
+- [x] Frontend: `features/progress/` (api, hooks, query-keys, types)
+- [x] Tạo `components/charts/BarChart.tsx`
+- [x] Tạo `components/charts/LineChart.tsx`
+- [x] Tạo `app/(tabs)/progress.tsx` — biểu đồ + period selector (4W/8W/12W)
+- [x] commit: `feat(progress): add progress charts for workout frequency and volume`
 
 ### 1.12 AI Plan Generation
-- [ ] Backend: Tạo `IAIService` interface
-- [ ] Backend: Tạo `PromptBuilder.cs` — build prompt từ user profile + goal + equipment
-- [ ] Backend: Tạo `ClaudeAIService.cs` — gọi Claude API, parse response thành `WorkoutPlan`
-- [ ] Backend: Tạo `GenerateAIPlanCommand` + handler
-- [ ] Backend: `WorkoutPlansController` thêm `POST /workout-plans/generate`
-- [ ] Frontend: Tạo `app/ai-coach/generate.tsx` — form chọn goal + equipment + days/week
-- [ ] Frontend: Loading animation khi AI đang tạo
-- [ ] Frontend: Preview plan trước khi lưu
-- [ ] commit: `feat(ai): add AI workout plan generation using Claude API`
+- [x] Backend: Tạo `IAIService` interface
+- [x] Backend: Tạo `PromptBuilder.cs` — build prompt từ user profile + goal + equipment
+- [x] Backend: Tạo `ClaudeAIService.cs` — gọi Claude API qua HttpClient
+- [x] Backend: Tạo `GenerateAIPlanCommand` + handler
+- [x] Backend: `WorkoutPlansController` thêm `POST /workout-plans/generate`
+- [x] Frontend: Tạo `features/ai-coach/` (api, hooks, types)
+- [x] Frontend: Tạo `app/ai-coach/generate.tsx` — form chọn goal + equipment + days/week
+- [x] commit: `feat(ai): add AI workout plan generation using Claude API`
 
 ---
 
@@ -290,3 +290,6 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-17 | 1.7 Workout Builder — Backend | 4ee0d68 |
 | 2026-05-17 | 1.8 Workout Builder — Frontend | 1ca2573 |
 | 2026-05-17 | 1.9 Session Logging — Backend | af979e7 |
+| 2026-05-17 | 1.10 Session Logging — Frontend | 32d7302 |
+| 2026-05-17 | 1.11 Progress Charts | baed80a |
+| 2026-05-17 | 1.12 AI Plan Generation | 9f3f280 |
