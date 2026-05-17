@@ -86,6 +86,24 @@
       "validationError": "Please enter a plan name"
     }
   },
+  "session": {
+    "title": "Workout",
+    "progress": "{{done}}/{{total}} sets",
+    "finish": "Finish",
+    "abandon": "Quit",
+    "abandonTitle": "Quit workout?",
+    "abandonMessage": "Progress will not be saved.",
+    "restTimer": "Rest",
+    "skipRest": "Skip",
+    "summary": {
+      "title": "Workout Complete!",
+      "subtitle": "Great job, keep it up!",
+      "duration": "Duration",
+      "exercises": "Exercises",
+      "sets": "Sets",
+      "done": "Back to Home"
+    }
+  },
   "exercises": {
     "title": "Exercise library",
     "search": "Search exercises...",

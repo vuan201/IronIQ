@@ -86,6 +86,24 @@
       "validationError": "Vui lòng nhập tên kế hoạch"
     }
   },
+  "session": {
+    "title": "Buổi tập",
+    "progress": "{{done}}/{{total}} set",
+    "finish": "Hoàn thành",
+    "abandon": "Thoát",
+    "abandonTitle": "Thoát buổi tập?",
+    "abandonMessage": "Tiến trình sẽ không được lưu.",
+    "restTimer": "Nghỉ giữa hiệp",
+    "skipRest": "Bỏ qua",
+    "summary": {
+      "title": "Hoàn thành!",
+      "subtitle": "Tuyệt vời, giữ vững nhịp độ nhé!",
+      "duration": "Thời gian",
+      "exercises": "Bài tập",
+      "sets": "Set",
+      "done": "Về trang chủ"
+    }
+  },
   "exercises": {
     "title": "Thư viện bài tập",
     "search": "Tìm kiếm bài tập...",
