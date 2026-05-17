@@ -51,10 +51,23 @@
     "guestButton": "Try without an account"
   },
   "exercises": {
+    "title": "Exercise library",
+    "search": "Search exercises...",
+    "add": "Add",
+    "empty": "No exercises found",
     "card": {
       "difficulty": "Difficulty",
       "muscleGroup": "Muscle group",
       "equipment": "Equipment"
+    },
+    "create": {
+      "title": "Create exercise",
+      "name": "Exercise name",
+      "namePlaceholder": "E.g. Bench Press",
+      "description": "Description",
+      "descriptionPlaceholder": "How to perform...",
+      "submit": "Create exercise",
+      "validationError": "Please enter a name and select at least 1 muscle group"
     }
   }
 }

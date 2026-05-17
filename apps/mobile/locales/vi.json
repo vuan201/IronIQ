@@ -51,10 +51,23 @@
     "guestButton": "Dùng thử không cần tài khoản"
   },
   "exercises": {
+    "title": "Thư viện bài tập",
+    "search": "Tìm kiếm bài tập...",
+    "add": "Thêm",
+    "empty": "Không tìm thấy bài tập",
     "card": {
       "difficulty": "Độ khó",
       "muscleGroup": "Nhóm cơ",
       "equipment": "Dụng cụ"
+    },
+    "create": {
+      "title": "Tạo bài tập",
+      "name": "Tên bài tập",
+      "namePlaceholder": "Ví dụ: Bench Press",
+      "description": "Mô tả",
+      "descriptionPlaceholder": "Hướng dẫn thực hiện...",
+      "submit": "Tạo bài tập",
+      "validationError": "Vui lòng nhập tên và chọn ít nhất 1 nhóm cơ"
     }
   }
 }
