@@ -265,10 +265,10 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `feat(social): add achievement system with 15 milestone badges`
 
 ### 4.3 Share & Leaderboard
-- [ ] Frontend: Share lịch tập (export as image hoặc deep link)
-- [ ] Backend: Leaderboard query (weekly streak, total volume — opt-in)
-- [ ] Frontend: Leaderboard screen
-- [ ] commit: `feat(social): add workout sharing and opt-in leaderboard`
+- [x] Frontend: Share lịch tập (export as image hoặc deep link)
+- [x] Backend: Leaderboard query (weekly streak, total volume — opt-in)
+- [x] Frontend: Leaderboard screen
+- [x] commit: `feat(social): add workout sharing and opt-in leaderboard`
 
 ---
 
@@ -301,3 +301,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-18 | 3.3 Session Review | 34190fb |
 | 2026-05-18 | 4.1 Streak & Domain Events | 95b8c37 |
 | 2026-05-18 | 4.2 Achievements | 302a130 |
+| 2026-05-18 | 4.3 Share & Leaderboard | 86d290f |
