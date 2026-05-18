@@ -159,7 +159,9 @@
       "duration": "Thời gian",
       "exercises": "Bài tập",
       "sets": "Set",
-      "done": "Về trang chủ"
+      "done": "Về trang chủ",
+      "share": "Chia sẻ buổi tập",
+      "shareText": "Tôi vừa hoàn thành buổi tập! 💪 {{exercises}} bài · {{sets}} set · {{duration}} #IronIQ"
     },
     "review": {
       "title": "Nhận xét từ AI Coach",
@@ -198,6 +200,13 @@
   "achievements": {
     "title": "Thành tựu",
     "unlocked": "Thành tựu mới mở khóa!"
+  },
+  "leaderboard": {
+    "title": "Bảng xếp hạng",
+    "subtitle": "Top người dùng có streak cao nhất (tự nguyện tham gia)",
+    "empty": "Chưa có ai tham gia bảng xếp hạng.",
+    "optIn": "Tham gia bảng xếp hạng",
+    "optInDesc": "Hiển thị tên và streak của bạn công khai"
   },
   "exercises": {
     "title": "Thư viện bài tập",

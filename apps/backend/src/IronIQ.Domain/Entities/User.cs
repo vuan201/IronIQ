@@ -17,6 +17,7 @@ public class User
     public int CurrentStreak { get; private set; }
     public int LongestStreak { get; private set; }
     public DateOnly? LastWorkoutDate { get; private set; }
+    public bool IsLeaderboardOptIn { get; private set; }
 
     private User() { }
 
@@ -51,6 +52,8 @@ public class User
         RefreshTokenHash = tokenHash;
         RefreshTokenExpiry = expiry;
     }
+
+    public void SetLeaderboardOptIn(bool optIn) => IsLeaderboardOptIn = optIn;
 
     public void UpdateProfile(string? name, int? age, float? heightCm, float? weightKg, FitnessGoal? goal, FitnessLevel? level)
     {

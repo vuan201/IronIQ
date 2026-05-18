@@ -32,6 +32,9 @@ public class UpdateProfileCommandHandler(
             command.Goal is not null ? goal : null,
             command.Level is not null ? level : null);
 
+        if (command.IsLeaderboardOptIn.HasValue)
+            user.SetLeaderboardOptIn(command.IsLeaderboardOptIn.Value);
+
         await unitOfWork.SaveChangesAsync(ct);
 
         return Result<UserProfileDto>.Success(new UserProfileDto(
@@ -47,6 +50,7 @@ public class UpdateProfileCommandHandler(
             user.SubscriptionTier.ToString(),
             user.CreatedAt,
             user.CurrentStreak,
-            user.LongestStreak));
+            user.LongestStreak,
+            user.IsLeaderboardOptIn));
     }
 }

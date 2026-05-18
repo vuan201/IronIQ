@@ -28,7 +28,8 @@ public class UsersController(IMediator mediator) : ControllerBase
             request.HeightCm,
             request.WeightKg,
             request.Goal,
-            request.Level);
+            request.Level,
+            request.IsLeaderboardOptIn);
 
         var result = await mediator.Send(command, ct);
         return result.IsSuccess ? Ok(result.Value) : MapError(result.Error!);
@@ -48,4 +49,5 @@ public record UpdateProfileRequest(
     float? HeightCm,
     float? WeightKg,
     string? Goal,
-    string? Level);
+    string? Level,
+    bool? IsLeaderboardOptIn);

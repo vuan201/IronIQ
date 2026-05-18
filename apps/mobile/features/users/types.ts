@@ -12,6 +12,7 @@ export interface UserProfile {
   createdAt: string;
   currentStreak: number;
   longestStreak: number;
+  isLeaderboardOptIn: boolean;
 }
 
 export interface UpdateProfileDto {
@@ -21,6 +22,7 @@ export interface UpdateProfileDto {
   weightKg?: number | null;
   goal?: string | null;
   level?: string | null;
+  isLeaderboardOptIn?: boolean;
 }
 
 export const FITNESS_GOALS = [

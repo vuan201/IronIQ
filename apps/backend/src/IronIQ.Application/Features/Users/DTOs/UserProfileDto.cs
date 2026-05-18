@@ -13,4 +13,5 @@ public record UserProfileDto(
     string SubscriptionTier,
     DateTime CreatedAt,
     int CurrentStreak,
-    int LongestStreak);
+    int LongestStreak,
+    bool IsLeaderboardOptIn);

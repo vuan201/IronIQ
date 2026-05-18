@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Switch,
   ActivityIndicator,
   Alert,
 } from 'react-native';
@@ -191,6 +192,32 @@ export default function ProfileScreen() {
           </Text>
           <Text style={{ color: colors.primary }}>›</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => router.push('/leaderboard')}
+          style={{ backgroundColor: colors.surface, borderRadius: 16, padding: 16, marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+        >
+          <Text style={{ fontSize: 15, color: colors.text, fontWeight: '600' }}>
+            🏅 {t('leaderboard.title')}
+          </Text>
+          <Text style={{ color: colors.primary }}>›</Text>
+        </TouchableOpacity>
+
+        <View style={{ backgroundColor: colors.surface, borderRadius: 16, padding: 16, marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+          <View style={{ flex: 1, marginRight: 12 }}>
+            <Text style={{ fontSize: 15, color: colors.text, fontWeight: '600' }}>
+              {t('leaderboard.optIn')}
+            </Text>
+            <Text style={{ fontSize: 12, color: colors.textSecondary, marginTop: 2 }}>
+              {t('leaderboard.optInDesc')}
+            </Text>
+          </View>
+          <Switch
+            value={profile?.isLeaderboardOptIn ?? false}
+            onValueChange={(v) => updateProfile.mutate({ isLeaderboardOptIn: v })}
+            trackColor={{ true: colors.primary }}
+          />
+        </View>
 
         <TouchableOpacity
           onPress={clearAuth}

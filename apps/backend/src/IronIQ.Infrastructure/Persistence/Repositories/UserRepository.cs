@@ -18,4 +18,12 @@ public class UserRepository(AppDbContext db) : IUserRepository
 
     public async Task AddAsync(User user, CancellationToken ct = default)
         => await db.Users.AddAsync(user, ct);
+
+    public async Task<IList<User>> GetLeaderboardAsync(int limit, CancellationToken ct = default)
+        => await db.Users
+            .Where(u => u.IsLeaderboardOptIn)
+            .OrderByDescending(u => u.CurrentStreak)
+            .ThenByDescending(u => u.LongestStreak)
+            .Take(limit)
+            .ToListAsync(ct);
 }

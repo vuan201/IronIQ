@@ -32,6 +32,7 @@ public class GetMyProfileQueryHandler(
             user.SubscriptionTier.ToString(),
             user.CreatedAt,
             user.CurrentStreak,
-            user.LongestStreak));
+            user.LongestStreak,
+            user.IsLeaderboardOptIn));
     }
 }

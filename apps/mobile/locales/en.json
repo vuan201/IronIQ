@@ -159,7 +159,9 @@
       "duration": "Duration",
       "exercises": "Exercises",
       "sets": "Sets",
-      "done": "Back to Home"
+      "done": "Back to Home",
+      "share": "Share Workout",
+      "shareText": "I just crushed a workout! 💪 {{exercises}} exercises · {{sets}} sets · {{duration}} #IronIQ"
     },
     "review": {
       "title": "AI Coach Review",
@@ -198,6 +200,13 @@
   "achievements": {
     "title": "Achievements",
     "unlocked": "New achievement unlocked!"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "subtitle": "Top users by current streak (opt-in only)",
+    "empty": "No one on the leaderboard yet.",
+    "optIn": "Join leaderboard",
+    "optInDesc": "Show your name and streak publicly"
   },
   "exercises": {
     "title": "Exercise library",

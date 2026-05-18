@@ -10,4 +10,5 @@ public record UpdateProfileCommand(
     float? HeightCm,
     float? WeightKg,
     string? Goal,
-    string? Level) : IRequest<Result<UserProfileDto>>;
+    string? Level,
+    bool? IsLeaderboardOptIn) : IRequest<Result<UserProfileDto>>;

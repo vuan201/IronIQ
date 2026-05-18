@@ -1,6 +1,6 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
+import { Modal, Pressable, ScrollView, Share, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/colors';
 import { ProgressionSuggestionCard } from '@/components/workout/ProgressionSuggestionCard';
@@ -29,6 +29,18 @@ export default function SummaryScreen() {
   const newAchievements = useNewlyUnlockedAchievements();
 
   const latest = history?.items[0];
+
+  const handleShare = async () => {
+    if (!latest) return;
+    const duration = formatDuration(latest.startedAt, latest.completedAt);
+    await Share.share({
+      message: t('session.summary.shareText', {
+        exercises: latest.totalExercises,
+        sets: latest.totalSets,
+        duration,
+      }),
+    });
+  };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }}>
@@ -114,6 +126,25 @@ export default function SummaryScreen() {
         <SessionReviewCard review={reviewData?.review} isLoading={isReviewLoading && !!sessionId} />
 
         <ProgressionSuggestionCard suggestions={suggestions ?? []} />
+
+        {latest && (
+          <Pressable
+            onPress={handleShare}
+            style={{
+              backgroundColor: colors.surface,
+              borderRadius: 14,
+              paddingVertical: 14,
+              alignItems: 'center',
+              marginBottom: 10,
+              borderWidth: 1,
+              borderColor: colors.border,
+            }}
+          >
+            <Text style={{ color: colors.primary, fontWeight: '600', fontSize: 15 }}>
+              {t('session.summary.share')}
+            </Text>
+          </Pressable>
+        )}
 
         <Pressable
           onPress={() => router.replace('/(tabs)')}
