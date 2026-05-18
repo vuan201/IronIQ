@@ -250,11 +250,11 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 ## GIAI ĐOẠN 4 — Social & Engagement
 
 ### 4.1 Streak & Domain Events
-- [~] Backend: `UpdateStreakHandler` lắng nghe `WorkoutSessionCompletedEvent`
-- [~] Backend: `Streak` field trên `User` entity
-- [~] Frontend: Streak flame badge trên Home screen
-- [~] Frontend: Push notification nhắc tập (expo-notifications)
-- [~] commit: `feat(social): add workout streak tracking with push notification reminder`
+- [x] Backend: `UpdateStreakHandler` lắng nghe `WorkoutSessionCompletedEvent`
+- [x] Backend: `Streak` field trên `User` entity
+- [x] Frontend: Streak flame badge trên Home screen
+- [x] Frontend: Push notification nhắc tập (expo-notifications)
+- [x] commit: `feat(social): add workout streak tracking with push notification reminder`
 
 ### 4.2 Achievements
 - [ ] Backend: `Achievement` entity + seed data (định nghĩa ~15 badge)
@@ -299,3 +299,4 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 | 2026-05-18 | 3.1 AI Chat | 9b0e752 |
 | 2026-05-18 | 3.2 Auto-Progression | 2e5ef82 |
 | 2026-05-18 | 3.3 Session Review | 34190fb |
+| 2026-05-18 | 4.1 Streak & Domain Events | 95b8c37 |
