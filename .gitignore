@@ -17,7 +17,10 @@ desktop.ini
 .env.*.local
 *.local
 *.local.*
+appsettings.json
 appsettings.Development.json
+appsettings.*.json
+!appsettings.Example.json
 secrets.json
 
 # ─── FRONTEND — React Native / Expo ───────────────────────────────────────────
