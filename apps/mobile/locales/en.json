@@ -6,7 +6,8 @@
     "edit": "Edit",
     "loading": "Loading...",
     "error": "Something went wrong",
-    "retry": "Retry"
+    "retry": "Retry",
+    "ok": "OK"
   },
   "auth": {
     "login": {
@@ -193,6 +194,10 @@
   "progression": {
     "title": "Ready to Progress!",
     "subtitle": "You've been consistent. Try increasing the weight next session."
+  },
+  "achievements": {
+    "title": "Achievements",
+    "unlocked": "New achievement unlocked!"
   },
   "exercises": {
     "title": "Exercise library",

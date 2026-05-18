@@ -6,7 +6,8 @@
     "edit": "Chỉnh sửa",
     "loading": "Đang tải...",
     "error": "Đã có lỗi xảy ra",
-    "retry": "Thử lại"
+    "retry": "Thử lại",
+    "ok": "OK"
   },
   "auth": {
     "login": {
@@ -193,6 +194,10 @@
   "progression": {
     "title": "Sẵn sàng tăng tạ!",
     "subtitle": "Bạn đã tập đều đặn. Hãy thử tăng tạ ở buổi tập tiếp theo."
+  },
+  "achievements": {
+    "title": "Thành tựu",
+    "unlocked": "Thành tựu mới mở khóa!"
   },
   "exercises": {
     "title": "Thư viện bài tập",

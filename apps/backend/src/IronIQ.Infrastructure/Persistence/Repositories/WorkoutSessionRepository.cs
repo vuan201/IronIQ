@@ -45,6 +45,18 @@ public class WorkoutSessionRepository(AppDbContext db) : IWorkoutSessionReposito
             .OrderBy(s => s.CompletedAt)
             .ToListAsync(ct);
 
+    public async Task<int> CountCompletedByUserAsync(Guid userId, CancellationToken ct = default)
+        => await db.WorkoutSessions
+            .CountAsync(s => s.UserId == userId && s.Status == Domain.Enums.SessionStatus.Completed, ct);
+
+    public async Task<int> CountCompletedSetsByUserAsync(Guid userId, CancellationToken ct = default)
+        => await db.WorkoutSessions
+            .Where(s => s.UserId == userId && s.Status == Domain.Enums.SessionStatus.Completed)
+            .SelectMany(s => s.ExerciseLogs)
+            .SelectMany(el => el.Sets)
+            .Where(s => s.IsCompleted)
+            .CountAsync(ct);
+
     public async Task AddAsync(WorkoutSession session, CancellationToken ct = default)
         => await db.WorkoutSessions.AddAsync(session, ct);
 

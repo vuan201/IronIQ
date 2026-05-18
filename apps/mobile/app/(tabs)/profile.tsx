@@ -183,6 +183,16 @@ export default function ProfileScreen() {
         </TouchableOpacity>
 
         <TouchableOpacity
+          onPress={() => router.push('/achievements')}
+          style={{ backgroundColor: colors.surface, borderRadius: 16, padding: 16, marginBottom: 16, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}
+        >
+          <Text style={{ fontSize: 15, color: colors.text, fontWeight: '600' }}>
+            🏆 {t('achievements.title')}
+          </Text>
+          <Text style={{ color: colors.primary }}>›</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
           onPress={clearAuth}
           style={{ backgroundColor: colors.surface, borderRadius: 12, padding: 16, alignItems: 'center' }}
         >

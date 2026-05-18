@@ -29,6 +29,8 @@ public static class DependencyInjection
         services.AddScoped<IWorkoutSessionRepository, WorkoutSessionRepository>();
         services.AddScoped<ICoinRepository, CoinRepository>();
         services.AddScoped<IProgressionSuggestionRepository, ProgressionSuggestionRepository>();
+        services.AddScoped<IAchievementRepository, AchievementRepository>();
+        services.AddScoped<IUserAchievementRepository, UserAchievementRepository>();
 
         services.AddHttpClient("claude");
         services.AddScoped<IAIService, ClaudeAIService>();

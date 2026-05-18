@@ -1,11 +1,12 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Colors } from '@/constants/colors';
 import { ProgressionSuggestionCard } from '@/components/workout/ProgressionSuggestionCard';
 import { SessionReviewCard } from '@/components/workout/SessionReviewCard';
 import { useProgressionSuggestions, useSessionReview } from '@/features/ai-coach/hooks';
+import { useNewlyUnlockedAchievements } from '@/features/achievements/hooks';
 import { useSessionHistory } from '@/features/workout-sessions/hooks';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -25,11 +26,37 @@ export default function SummaryScreen() {
   const { data: history } = useSessionHistory(1);
   const { data: suggestions } = useProgressionSuggestions(sessionId);
   const { data: reviewData, isLoading: isReviewLoading } = useSessionReview(sessionId);
+  const newAchievements = useNewlyUnlockedAchievements();
 
   const latest = history?.items[0];
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }}>
+      <Modal visible={newAchievements.length > 0} transparent animationType="fade">
+        <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.6)', justifyContent: 'center', alignItems: 'center', padding: 32 }}>
+          <View style={{ backgroundColor: colors.surface, borderRadius: 24, padding: 28, width: '100%', alignItems: 'center', gap: 12 }}>
+            <Text style={{ fontSize: 40 }}>🎉</Text>
+            <Text style={{ color: colors.text, fontSize: 20, fontWeight: '800' }}>
+              {t('achievements.unlocked')}
+            </Text>
+            {newAchievements.map((a) => (
+              <View key={a.id} style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                <Text style={{ fontSize: 28 }}>{a.iconEmoji}</Text>
+                <View>
+                  <Text style={{ color: colors.text, fontWeight: '700' }}>{a.name}</Text>
+                  <Text style={{ color: colors.textSecondary, fontSize: 12 }}>{a.description}</Text>
+                </View>
+              </View>
+            ))}
+            <Pressable
+              onPress={() => router.replace('/(tabs)')}
+              style={{ backgroundColor: '#FF6B35', borderRadius: 12, paddingHorizontal: 28, paddingVertical: 12, marginTop: 4 }}
+            >
+              <Text style={{ color: '#FFF', fontWeight: '700' }}>{t('common.ok')}</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
       <ScrollView contentContainerStyle={{ flex: 1, paddingHorizontal: 16, paddingTop: 32 }}>
         <View style={{ alignItems: 'center', marginBottom: 32 }}>
           <View

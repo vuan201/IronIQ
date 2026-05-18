@@ -257,12 +257,12 @@ Trạng thái: `[ ]` chưa làm · `[~]` đang làm · `[x]` xong
 - [x] commit: `feat(social): add workout streak tracking with push notification reminder`
 
 ### 4.2 Achievements
-- [ ] Backend: `Achievement` entity + seed data (định nghĩa ~15 badge)
-- [ ] Backend: `UserAchievement` entity
-- [ ] Backend: `CheckAchievementsHandler` lắng nghe `WorkoutSessionCompletedEvent`
-- [ ] Frontend: Achievement list screen + badge card (locked/unlocked)
-- [ ] Frontend: Celebration animation khi mở khóa badge mới
-- [ ] commit: `feat(social): add achievement system with 15 milestone badges`
+- [~] Backend: `Achievement` entity + seed data (định nghĩa ~15 badge)
+- [~] Backend: `UserAchievement` entity
+- [~] Backend: `CheckAchievementsHandler` lắng nghe `WorkoutSessionCompletedEvent`
+- [~] Frontend: Achievement list screen + badge card (locked/unlocked)
+- [~] Frontend: Celebration animation khi mở khóa badge mới
+- [~] commit: `feat(social): add achievement system with 15 milestone badges`
 
 ### 4.3 Share & Leaderboard
 - [ ] Frontend: Share lịch tập (export as image hoặc deep link)

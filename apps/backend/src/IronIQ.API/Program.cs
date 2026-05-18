@@ -35,6 +35,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 
 await IronIQ.Infrastructure.Persistence.DataSeeder.SeedAsync(app.Services);
+await IronIQ.Infrastructure.Persistence.DataSeeder.SeedAchievementsAsync(app.Services);
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
