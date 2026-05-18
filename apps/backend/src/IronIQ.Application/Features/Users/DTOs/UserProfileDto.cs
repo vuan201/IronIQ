@@ -11,4 +11,6 @@ public record UserProfileDto(
     string? Level,
     int CoinBalance,
     string SubscriptionTier,
-    DateTime CreatedAt);
+    DateTime CreatedAt,
+    int CurrentStreak,
+    int LongestStreak);

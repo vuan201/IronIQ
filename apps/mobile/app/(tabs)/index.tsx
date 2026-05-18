@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { WorkoutDayCard } from '@/components/workout/WorkoutDayCard';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { useWorkoutPlans } from '@/features/workout-plans/hooks';
+import { useMyProfile } from '@/features/users/hooks';
 import type { WorkoutDay } from '@/features/workout-plans/types';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -15,6 +16,7 @@ export default function HomeScreen() {
   const router = useRouter();
   const { colors } = useTheme();
   const { data: plans, isLoading } = useWorkoutPlans();
+  const { data: profile } = useMyProfile();
 
   const todayDays = plans?.flatMap((p) =>
     p.days.filter((d) => d.dayOfWeek === TODAY_DOW)
@@ -27,13 +29,22 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }}>
       <ScrollView style={{ flex: 1, paddingHorizontal: 16 }} showsVerticalScrollIndicator={false}>
-        <View style={{ paddingTop: 24, paddingBottom: 16 }}>
-          <Text style={{ fontSize: 24, fontWeight: '700', color: colors.text }}>
-            {t('home.title')}
-          </Text>
-          <Text style={{ color: colors.textSecondary, marginTop: 4 }}>
-            {t('home.subtitle')}
-          </Text>
+        <View style={{ paddingTop: 24, paddingBottom: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+          <View>
+            <Text style={{ fontSize: 24, fontWeight: '700', color: colors.text }}>
+              {t('home.title')}
+            </Text>
+            <Text style={{ color: colors.textSecondary, marginTop: 4 }}>
+              {t('home.subtitle')}
+            </Text>
+          </View>
+          {(profile?.currentStreak ?? 0) > 0 && (
+            <View style={{ alignItems: 'center', backgroundColor: colors.surface, borderRadius: 14, paddingHorizontal: 14, paddingVertical: 8, borderWidth: 1, borderColor: colors.border }}>
+              <Text style={{ fontSize: 22 }}>🔥</Text>
+              <Text style={{ fontSize: 18, fontWeight: '800', color: '#FF6B35' }}>{profile?.currentStreak}</Text>
+              <Text style={{ fontSize: 11, color: colors.textSecondary }}>{t('home.streak')}</Text>
+            </View>
+          )}
         </View>
 
         <Text style={{ fontSize: 18, fontWeight: '600', color: colors.text, marginBottom: 12 }}>

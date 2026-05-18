@@ -61,7 +61,8 @@
     "noPlans": "You don't have any workout plans yet.",
     "createPlan": "Create plan",
     "newPlan": "+ New Plan",
-    "planDays": "{{count}} days / week"
+    "planDays": "{{count}} days / week",
+    "streak": "days"
   },
   "workoutPlans": {
     "days": {

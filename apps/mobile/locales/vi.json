@@ -61,7 +61,8 @@
     "noPlans": "Bạn chưa có kế hoạch tập nào.",
     "createPlan": "Tạo kế hoạch",
     "newPlan": "+ Kế hoạch mới",
-    "planDays": "{{count}} ngày / tuần"
+    "planDays": "{{count}} ngày / tuần",
+    "streak": "ngày"
   },
   "workoutPlans": {
     "days": {

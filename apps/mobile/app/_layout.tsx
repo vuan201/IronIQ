@@ -5,6 +5,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '../lib/query-client';
 import { useAuthStore } from '@/features/auth/store';
 import { useConfigureRevenueCat } from '@/features/subscription/hooks';
+import { useStreakNotification } from '@/hooks/useStreakNotification';
 
 function AuthGuard() {
   const router = useRouter();
@@ -31,11 +32,17 @@ function RevenueCatInit() {
   return null;
 }
 
+function NotificationInit() {
+  useStreakNotification();
+  return null;
+}
+
 export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthGuard />
       <RevenueCatInit />
+      <NotificationInit />
       <Stack screenOptions={{ headerShown: false }} />
     </QueryClientProvider>
   );

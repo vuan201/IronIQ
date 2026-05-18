@@ -14,6 +14,9 @@ public class User
     public string? RefreshTokenHash { get; private set; }
     public DateTime? RefreshTokenExpiry { get; private set; }
     public DateTime CreatedAt { get; private set; }
+    public int CurrentStreak { get; private set; }
+    public int LongestStreak { get; private set; }
+    public DateOnly? LastWorkoutDate { get; private set; }
 
     private User() { }
 
@@ -29,6 +32,18 @@ public class User
             Profile = new UserProfile(),
             CreatedAt = DateTime.UtcNow
         };
+    }
+
+    public void UpdateStreak(DateOnly today)
+    {
+        if (LastWorkoutDate == today) return;
+
+        CurrentStreak = LastWorkoutDate == today.AddDays(-1) ? CurrentStreak + 1 : 1;
+
+        if (CurrentStreak > LongestStreak)
+            LongestStreak = CurrentStreak;
+
+        LastWorkoutDate = today;
     }
 
     public void SetRefreshToken(string tokenHash, DateTime expiry)

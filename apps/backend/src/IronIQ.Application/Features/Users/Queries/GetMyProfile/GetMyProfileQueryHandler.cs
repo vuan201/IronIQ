@@ -30,6 +30,8 @@ public class GetMyProfileQueryHandler(
             user.Profile.Level?.ToString(),
             user.CoinBalance,
             user.SubscriptionTier.ToString(),
-            user.CreatedAt));
+            user.CreatedAt,
+            user.CurrentStreak,
+            user.LongestStreak));
     }
 }

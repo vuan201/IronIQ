@@ -10,6 +10,8 @@ export interface UserProfile {
   coinBalance: number;
   subscriptionTier: string;
   createdAt: string;
+  currentStreak: number;
+  longestStreak: number;
 }
 
 export interface UpdateProfileDto {
